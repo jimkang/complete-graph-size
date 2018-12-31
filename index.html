@@ -1,0 +1,37 @@
+<html>
+<head>
+  <title>Complete graph size and the triangular series</title>
+  <link rel="stylesheet" href="app.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<div id="status-message" class="hidden"></div>
+
+<section class="step">
+  <p>We are going to show that the number of edges in a <a href="https://en.wikipedia.org/wiki/Complete_graph">complete graph</a> is equal to the sum of the <a href="https://en.wikipedia.org/wiki/Triangular_number">triangular series</a> that goes up to one less than the number for vertices in the complete graph.</p>
+</section>
+
+<section class="step">
+ OK, to back up some, a complete graph is a graph in which every single vertex is connected to ever other point in the graph by an edge.
+
+For example, here is a complete graph for 3 vertices:
+
+<svg id="complete-graph-example-board" width="500" height="500" viewBox="0 0 100 100">
+  <g id="complete-graph-example-edge-root"></g>
+  <g id="complete-graph-example-vertex-root"></g>
+</svg>
+
+<input id="example-graph-vertices-field" type="number" value="3"></input>
+
+</section>
+
+<div id="explanation-field" class="hidden"></div>
+
+<button id="silly-name-button">Make a silly name!</button>
+
+<script src="index.js"></script>
+
+</body>
+</html>
