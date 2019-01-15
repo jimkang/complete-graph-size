@@ -1,6 +1,9 @@
 var controlInitialized = false;
-var exampleGraphVerticesField = document.getElementById(
-  'example-graph-vertices-field'
+var exampleGraphVerticesControl = document.getElementById(
+  'example-graph-vertices-control'
+);
+var vertexCountLabel = document.querySelector(
+  '#complete-graph-step .vertex-count-label'
 );
 var renderEdges = require('../dom/render-edges');
 var renderPoints = require('../dom/render-points');
@@ -9,12 +12,12 @@ var getCompleteGraph = require('../get-complete-graph');
 
 function graphExampleFlow() {
   if (!controlInitialized) {
-    exampleGraphVerticesField.addEventListener('change', graphExampleFlow);
+    exampleGraphVerticesControl.addEventListener('change', graphExampleFlow);
     controlInitialized = true;
   }
 
-  var numberOfVertices = +exampleGraphVerticesField.value;
-  console.log('vertices', numberOfVertices);
+  var numberOfVertices = Math.round(+exampleGraphVerticesControl.value);
+  vertexCountLabel.textContent = numberOfVertices;
   var vertices = getVertexPositions({
     numberOfVertices,
     width: 100,

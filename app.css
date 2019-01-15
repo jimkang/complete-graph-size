@@ -4,9 +4,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #ffe264;
-  color: #444;
-  height: 100%;
+  background-color: #fff;
+  color: #666;
+  margin-bottom: 2em;
 }
 
 .hidden {
@@ -42,10 +42,30 @@ button {
   box-shadow: #444 0 0 4px;
 }
 
-#explanation-field {
+.step {
+  display: flex;
+  flex-direction: column;
+}
+
+.step svg,input {
+  align-self: center;
+}
+
+.step input {
+  font-size: 2em;
+  width: 80%;
+  min-width: 10em;
+}
+
+.instruction {
   font-style: italic;
-  flex-grow: 1;
   margin: 1em;
+  text-align: center;
+}
+
+.vertex-count-label {
+  font-weight: bold;
+  font-size: larger;
 }
 
 svg text {
