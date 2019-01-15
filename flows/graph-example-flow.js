@@ -21,7 +21,8 @@ function graphExampleFlow() {
   var vertices = getVertexPositions({
     numberOfVertices,
     width: 100,
-    height: 100
+    height: 100,
+    margin: 20
   });
   var edges = getCompleteGraph({ vertices });
 
