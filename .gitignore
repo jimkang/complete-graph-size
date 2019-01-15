@@ -2,6 +2,5 @@
 node_modules
 *.swp
 config.js
-confg.mk
-name-stems.js
+config.mk
 index.js
