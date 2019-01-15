@@ -69,12 +69,18 @@ button {
 }
 
 svg text {
-  font-size: 8pt;
+  font-size: 6px;
+  fill: #333;
+  stroke: none;
 }
 
 .graph-vertex {
-  fill: none;
-  stroke: #333;
+  fill: #999;
+  stroke: none;
+}
+
+.graph-edge {
+  stroke-width: 0.1;
 }
 
 @media all and (max-height: 568px) {

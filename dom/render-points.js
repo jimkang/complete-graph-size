@@ -6,7 +6,7 @@ function renderPoints({
   rootSelector,
   xProperty = '0',
   yProperty = '1',
-  dx = -12,
+  dx = -8,
   dy = 0,
   r = 1,
   labelAccessor,
@@ -30,6 +30,7 @@ function renderPoints({
     .attr('cy', 0);
 
   if (labelAccessor) {
+    // TODO: Radial positioning
     pointStems
       .append('text')
       .attr('dx', dx)

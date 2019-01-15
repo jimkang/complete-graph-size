@@ -9,6 +9,8 @@ var renderEdges = require('../dom/render-edges');
 var renderPoints = require('../dom/render-points');
 var getVertexPositions = require('../get-vertex-positions');
 var getCompleteGraph = require('../get-complete-graph');
+var colorScales = require('d3-scale-chromatic');
+var curry = require('lodash.curry');
 
 function graphExampleFlow() {
   if (!controlInitialized) {
@@ -30,20 +32,23 @@ function graphExampleFlow() {
     edges,
     className: 'graph-edge',
     rootSelector: '#complete-graph-example-edge-root',
-    colorAccessor: 'blue'
+    colorAccessor: curry(getEdgeColor)(edges.length) // 'rgb(237, 121, 83)'
   });
 
   renderPoints({
     points: vertices,
     className: 'graph-vertex',
     rootSelector: '#complete-graph-example-vertex-root',
-    labelAccessor: getIndex,
-    r: 4
+    labelAccessor: getIndex
   });
 }
 
 function getIndex(d, i) {
   return i;
+}
+
+function getEdgeColor(edgeCount, d, i) {
+  return colorScales.interpolateViridis(i / edgeCount);
 }
 
 module.exports = graphExampleFlow;
