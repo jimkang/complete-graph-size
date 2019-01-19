@@ -58,39 +58,44 @@
     </section>
 
     <section class="step" id="triangular-series-step">
+      <p>Now, let's talk about what a "triangular number" is.</p>
       <p>
-        Now, what is the triangular series? It's the series of triangular numbers.
+        You get a triangular number for an input number, say, <i>n</i>, by doing
+        the following:
       </p>
+      <ol>
+        <li>Draw an equilateral triangle with <i>n</i> dots on each side.</li>
+        <li>Count the total number of dots in the triangle.</li>
+      </ol>
       <p>
-        A triangular number result for a given number, n, can be obtained by drawing an equilateral triangle with n dots on each side, then counting the total number of dots in the triangle.
+        The number of dots in the triangle is the triangular number of <i>n</i>.
+      </p>
       <p>
         For example, here is an equilateral triangle with
         <span class="triangle-side-count-label">3</span> dots per side:
       </p>
-
-      <svg
-        id="complete-graph-example-board"
-        width="600"
-        height="600"
-        viewBox="0 0 100 100"
-      >
-        <g id="complete-graph-example-edge-root"></g>
-        <g id="complete-graph-example-vertex-root"></g>
-      </svg>
-
       <p class="instruction">
-        Move the slider to change the number of vertices in the graph.
+        Move the slider to change the number of dots per side.
       </p>
       <input
-        id="example-graph-vertices-control"
+        id="triangle-side-length-control"
         type="range"
         value="3"
         min="1"
         max="25"
         step="0.1"
       />
-    </section>
 
+      <svg
+        id="triangular-number-board"
+        width="600"
+        height="600"
+        viewBox="0 0 100 100"
+      >
+        <g id="triangle-row-root"></g>
+        <g id="triangle-dot-root"></g>
+      </svg>
+    </section>
 
     <div id="explanation-field" class="hidden"></div>
 
