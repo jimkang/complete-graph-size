@@ -7,7 +7,7 @@ var vertexCountLabel = document.querySelector(
 );
 var renderEdges = require('../dom/render-edges');
 var renderPoints = require('../dom/render-points');
-var getVertexPositions = require('../get-vertex-positions');
+var getCompleteGraphVertexPositions = require('../get-complete-graph-vertex-positions');
 var getCompleteGraph = require('../get-complete-graph');
 var colorScales = require('d3-scale-chromatic');
 var curry = require('lodash.curry');
@@ -20,7 +20,7 @@ function graphExampleFlow() {
 
   var numberOfVertices = Math.round(+exampleGraphVerticesControl.value);
   vertexCountLabel.textContent = numberOfVertices;
-  var vertices = getVertexPositions({
+  var vertices = getCompleteGraphVertexPositions({
     numberOfVertices,
     width: 100,
     height: 100,

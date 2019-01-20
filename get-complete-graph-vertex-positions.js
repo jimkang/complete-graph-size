@@ -1,6 +1,11 @@
 var math = require('basic-2d-math');
 
-function getVertexPositions({ numberOfVertices, width, height, margin }) {
+function getCompleteGraphVertexPositions({
+  numberOfVertices,
+  width,
+  height,
+  margin
+}) {
   // Get positions around a circle.
   const radius =
     width > height ? height - 2 * margin : (width - 2 * margin) / 2;
@@ -16,4 +21,4 @@ function getVertexPositions({ numberOfVertices, width, height, margin }) {
   return positions;
 }
 
-module.exports = getVertexPositions;
+module.exports = getCompleteGraphVertexPositions;

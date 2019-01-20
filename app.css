@@ -83,6 +83,10 @@ svg text {
   stroke-width: 0.1;
 }
 
+#triangular-number-board {
+  border: solid black 1px;
+}
+
 @media all and (max-height: 568px) {
   body {
     font-size: 18px;
