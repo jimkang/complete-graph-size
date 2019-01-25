@@ -21,7 +21,22 @@
               <g class="graph-vertex-root"></g>
             </svg>
           </div>
-          <p>It's 210.</p>
+          <div>
+            <p>It's 210! There is an easy way to get this number:</p>
+            <p class="key-point">
+              It's
+              <span class="variable"
+                >(one less than the number of vertices)</span
+              >
+              times
+              <span class="variable">(the number of vertices)</span> divided by
+              2.
+            </p>
+          </div>
+          <p>
+            In this case, that's <strong>20 times 21 divided by 2</strong>,
+            which equals 210.
+          </p>
         </div>
         <div>
           <div class="side-caption-with-svg">
@@ -34,11 +49,91 @@
               <g class="triangle-dot-root"></g>
             </svg>
           </div>
-          <p>It's 210.</p>
+          <div>
+            <p>It's 210! There is an easy way to get this number:</p>
+            <p class="key-point">
+              It's
+              <span class="variable"
+                >(the number of dots on each side of the equilateral
+                triangle)</span
+              >
+              times
+              <span class="variable"
+                >(the number of dot on each side plus 1)</span
+              >
+              divided by 2.
+            </p>
+            <p>
+              In this case, that's <strong>20 times 21 divided by 2</strong>,
+              which equals 210.
+            </p>
+          </div>
         </div>
       </div>
 
+      <div>
+        Both operations can be rephrased as
+        <strong>f(n) = n * (n + 1)/2</strong> It's a convenient function! It can
+        let you quickly count the edges in much larger complete graphs and get
+        the triangular number for far bigger numbers.
+      </div>
+      <div>
+        <div class="side-caption-with-svg">
+          <p>This complete graph has 101 vertices (dots).</p>
+          <svg id="big-intro-graph-board" viewBox="0 0 100 100">
+            <g class="graph-edge-root"></g>
+            <g class="graph-vertex-root"></g>
+          </svg>
+        </div>
+        <div>
+          <p>It's 210! There is an easy way to get this number:</p>
+          <p class="key-point">
+            It's
+            <span class="variable">(one less than the number of vertices)</span>
+            times <span class="variable">(the number of vertices)</span> divided
+            by 2.
+          </p>
+        </div>
+        <p>
+          In this case, that's <strong>20 times 21 divided by 2</strong>, which
+          equals 210.
+        </p>
+      </div>
+      <div>
+        <div class="side-caption-with-svg">
+          <p>This equilateral triangle has 100 dots on a side.</p>
+          <svg id="big-intro-triangular-number-board" viewBox="0 0 100 100">
+            <g class="triangle-row-root"></g>
+            <g class="triangle-dot-root"></g>
+          </svg>
+        </div>
+        <div>
+          <p>It's 210! There is an easy way to get this number:</p>
+          <p class="key-point">
+            It's
+            <span class="variable"
+              >(the number of dots on each side of the equilateral
+              triangle)</span
+            >
+            times
+            <span class="variable"
+              >(the number of dot on each side plus 1)</span
+            >
+            divided by 2.
+          </p>
+          <p>
+            In this case, that's <strong>20 times 21 divided by 2</strong>,
+            which equals 210.
+          </p>
+        </div>
+      </div>
+      <div>
+        But how can we trust it?
+        <span class="exhortation">Let's see why it works.</span>
+      </div>
+      <!--
       <p>
+         
         How do we know?
         We are going to show that the number of edges in a
         <a href="https://en.wikipedia.org/wiki/Complete_graph"
@@ -51,8 +146,9 @@
         that goes up to one less than the number for vertices in the complete
         graph.
       </p>
+-->
     </section>
-
+<!-- TODO: Move explanation of terms to top! -->
     <section class="step" id="complete-graph-step">
       <p>
         OK, to back up some, a complete graph is a graph in which every single

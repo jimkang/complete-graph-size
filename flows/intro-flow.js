@@ -13,6 +13,14 @@ function introFlow() {
     rootSelector: '#small-intro-triangular-number-board',
     pointsPerSide: 20
   });
+  makeGraphInPanel({
+    rootSelector: '#big-intro-graph-board',
+    numberOfVertices: 101
+  });
+  makeTriangleInPanel({
+    rootSelector: '#big-intro-triangular-number-board',
+    pointsPerSide: 100
+  });
 }
 
 function makeGraphInPanel({ rootSelector, numberOfVertices }) {
