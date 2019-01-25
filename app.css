@@ -7,6 +7,8 @@ body {
   background-color: #fff;
   color: #666;
   margin-bottom: 2em;
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 .hidden {
@@ -85,6 +87,40 @@ svg text {
 
 #triangular-number-board {
   border: solid black 1px;
+}
+
+.compare-panels-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.compare-panels-container > div {
+  width: 50%;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side-caption-with-svg {
+  display: flex;
+  /*! flex-wrap: wrap; */
+  align-items: center;
+  flex-direction: column;
+  /*! justify-items: flex-end; */
+}
+
+.side-caption-with-svg :first-child {
+  width: 50%;
+}
+
+.side-caption-with-svg > svg {
+  min-width: 320px;
+  min-height: 320px;
+  flex-grow: 1;
+  max-width: 480px;
+  max-height: 480px;
 }
 
 @media all and (max-height: 568px) {

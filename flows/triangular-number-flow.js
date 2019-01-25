@@ -5,11 +5,8 @@ var triangularSideControl = document.getElementById(
 var triangleSideCountLabel = document.querySelector(
   '#triangular-number-step .triangle-side-count-label'
 );
-var renderEdges = require('../dom/render-edges');
 var renderPoints = require('../dom/render-points');
 var getPyramid = require('../get-pyramid');
-var colorScales = require('d3-scale-chromatic');
-var curry = require('lodash.curry');
 
 function triangularNumberFlow() {
   if (!controlInitialized) {
