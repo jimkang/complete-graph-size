@@ -6,7 +6,90 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <div id="status-message" class="hidden"></div>
+    <section class="step" id="complete-graph-step">
+      <p>
+        We're going to at interesting things:
+        <span class="important-term">complete graphs</span> and
+        <span class="important-term">triangular numbers</span>. We are also
+        going to look at a relationship that they share.
+      </p>
+      <p>
+        So, what is a "complete graph"? It's a graph in which every single
+        vertex is connected to ever other point in the graph by an edge.
+      </p>
+
+      <p>
+        For example, here is a complete graph for
+        <span class="vertex-count-label">3</span> vertices:
+      </p>
+
+      <svg
+        id="complete-graph-example-board"
+        width="500"
+        height="500"
+        viewBox="0 0 100 100"
+      >
+        <g id="complete-graph-example-edge-root"></g>
+        <g id="complete-graph-example-vertex-root"></g>
+      </svg>
+
+      <input
+        id="example-graph-vertices-control"
+        type="range"
+        value="3"
+        min="1"
+        max="25"
+        step="0.1"
+      />
+      <p class="instruction">
+        Move the slider to change the number of vertices (dots) in the graph.
+      </p>
+      <p>
+        As you increase the number of vertices, the number of edges (the lines)
+        increases far faster. We'll look more closely at that relationship
+        later.
+      </p>
+    </section>
+
+    <section class="step" id="triangular-number-step">
+      <p>Now, let's talk about what a "triangular number" is.</p>
+      <p>
+        You get a triangular number for an input number, say, <i>n</i>, by doing
+        the following:
+      </p>
+      <ol>
+        <li>Draw an equilateral triangle with <i>n</i> dots on each side.</li>
+        <li>Count the total number of dots in the triangle.</li>
+      </ol>
+      <p>
+        The number of dots in the triangle is the triangular number of <i>n</i>.
+      </p>
+      <p>
+        For example, here is an equilateral triangle with
+        <span class="triangle-side-count-label">3</span> dots per side:
+      </p>
+      <p class="instruction">
+        Move the slider to change the number of dots per side.
+      </p>
+      <input
+        id="triangle-side-length-control"
+        type="range"
+        value="3"
+        min="1"
+        max="25"
+        step="0.1"
+      />
+
+      <svg
+        id="triangular-number-board"
+        width="600"
+        height="600"
+        viewBox="0 0 100 100"
+      >
+        <g id="triangle-row-root"></g>
+        <g id="triangle-dot-root"></g>
+      </svg>
+    </section>
 
     <section class="step">
       <div class="compare-panels-container">
@@ -148,81 +231,6 @@
       </p>
 -->
     </section>
-<!-- TODO: Move explanation of terms to top! -->
-    <section class="step" id="complete-graph-step">
-      <p>
-        OK, to back up some, a complete graph is a graph in which every single
-        vertex is connected to ever other point in the graph by an edge.
-      </p>
-
-      <p>
-        For example, here is a complete graph for
-        <span class="vertex-count-label">3</span> vertices:
-      </p>
-
-      <svg
-        id="complete-graph-example-board"
-        width="600"
-        height="600"
-        viewBox="0 0 100 100"
-      >
-        <g id="complete-graph-example-edge-root"></g>
-        <g id="complete-graph-example-vertex-root"></g>
-      </svg>
-
-      <p class="instruction">
-        Move the slider to change the number of vertices in the graph.
-      </p>
-      <input
-        id="example-graph-vertices-control"
-        type="range"
-        value="3"
-        min="1"
-        max="25"
-        step="0.1"
-      />
-    </section>
-
-    <section class="step" id="triangular-number-step">
-      <p>Now, let's talk about what a "triangular number" is.</p>
-      <p>
-        You get a triangular number for an input number, say, <i>n</i>, by doing
-        the following:
-      </p>
-      <ol>
-        <li>Draw an equilateral triangle with <i>n</i> dots on each side.</li>
-        <li>Count the total number of dots in the triangle.</li>
-      </ol>
-      <p>
-        The number of dots in the triangle is the triangular number of <i>n</i>.
-      </p>
-      <p>
-        For example, here is an equilateral triangle with
-        <span class="triangle-side-count-label">3</span> dots per side:
-      </p>
-      <p class="instruction">
-        Move the slider to change the number of dots per side.
-      </p>
-      <input
-        id="triangle-side-length-control"
-        type="range"
-        value="3"
-        min="1"
-        max="25"
-        step="0.1"
-      />
-
-      <svg
-        id="triangular-number-board"
-        width="600"
-        height="600"
-        viewBox="0 0 100 100"
-      >
-        <g id="triangle-row-root"></g>
-        <g id="triangle-dot-root"></g>
-      </svg>
-    </section>
-
     <div id="explanation-field" class="hidden"></div>
 
     <script src="index.js"></script>

@@ -24,7 +24,7 @@ function graphExampleFlow() {
     numberOfVertices,
     width: 100,
     height: 100,
-    margin: 20
+    margin: 5 
   });
   var edges = getCompleteGraph({ vertices });
 
