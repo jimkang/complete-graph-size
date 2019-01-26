@@ -22,7 +22,7 @@ function triangularNumberFlow() {
   resultLabel.textContent = getTriangularNumber(pointsPerSide);
   var pyramid = getPyramid({
     pointsPerSide,
-    width: 100,
+    width: 120,
     height: 100,
     margin: 1
   });
