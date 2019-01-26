@@ -5,6 +5,9 @@ var triangularSideControl = document.getElementById(
 var triangleSideCountLabel = document.querySelector(
   '#triangular-number-step .triangle-side-count-label'
 );
+var resultLabel = document.querySelector(
+  '#triangular-number-step .triangular-number-result-label'
+);
 var renderPoints = require('../dom/render-points');
 var getPyramid = require('../get-pyramid');
 
@@ -16,14 +19,13 @@ function triangularNumberFlow() {
 
   var pointsPerSide = Math.round(+triangularSideControl.value);
   triangleSideCountLabel.textContent = pointsPerSide;
-
+  resultLabel.textContent = getTriangularNumber(pointsPerSide);
   var pyramid = getPyramid({
     pointsPerSide,
     width: 100,
     height: 100,
-    margin: 20
+    margin: 1
   });
-  console.log('pyramid', pyramid);
 
   renderPoints({
     points: pyramid.points,
@@ -32,12 +34,8 @@ function triangularNumberFlow() {
   });
 }
 
-// function getIndex(d, i) {
-//   return i;
-// }
-//
-// function getEdgeColor(edgeCount, d, i) {
-//   return colorScales.interpolateViridis(i / edgeCount);
-// }
+function getTriangularNumber(pointsPerSide) {
+  return (pointsPerSide * (pointsPerSide + 1)) / 2;
+}
 
 module.exports = triangularNumberFlow;

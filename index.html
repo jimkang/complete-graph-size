@@ -6,13 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <section class="step" id="complete-graph-step">
+    <pre id="status-message" class="hidden"></pre>
+    <section class="step">
       <p>
         We're going to at interesting things:
         <span class="important-term">complete graphs</span> and
         <span class="important-term">triangular numbers</span>. We are also
         going to look at a relationship that they share.
       </p>
+    </section>
+    <hr />
+    <section class="step" id="complete-graph-step">
       <p>
         So, what is a "complete graph"? It's a graph in which every single
         vertex is connected to ever other point in the graph by an edge.
@@ -51,8 +55,39 @@
       </p>
     </section>
 
+    <hr />
+
     <section class="step" id="triangular-number-step">
       <p>Now, let's talk about what a "triangular number" is.</p>
+      <p>
+        If you have <span class="triangle-side-count-label">3</span> dots per
+        side in an equilateral triangle like the one below, the triangular
+        number is <span class="triangular-number-result-label">6</span> &mdash;
+        the total number of dots in the triangle.
+      </p>
+      <svg
+        id="triangular-number-board"
+        width="600"
+        height="600"
+        viewBox="0 0 100 100"
+      >
+        <g id="triangle-row-root"></g>
+        <g id="triangle-dot-root"></g>
+      </svg>
+
+      <input
+        id="triangle-side-length-control"
+        type="range"
+        value="3"
+        min="1"
+        max="25"
+        step="0.1"
+      />
+
+      <p class="instruction">
+        Move the slider to change the number of dots per side.
+      </p>
+
       <p>
         You get a triangular number for an input number, say, <i>n</i>, by doing
         the following:
@@ -64,31 +99,6 @@
       <p>
         The number of dots in the triangle is the triangular number of <i>n</i>.
       </p>
-      <p>
-        For example, here is an equilateral triangle with
-        <span class="triangle-side-count-label">3</span> dots per side:
-      </p>
-      <p class="instruction">
-        Move the slider to change the number of dots per side.
-      </p>
-      <input
-        id="triangle-side-length-control"
-        type="range"
-        value="3"
-        min="1"
-        max="25"
-        step="0.1"
-      />
-
-      <svg
-        id="triangular-number-board"
-        width="600"
-        height="600"
-        viewBox="0 0 100 100"
-      >
-        <g id="triangle-row-root"></g>
-        <g id="triangle-dot-root"></g>
-      </svg>
     </section>
 
     <section class="step">
