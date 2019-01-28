@@ -62,7 +62,7 @@ button {
   text-align: center;
 }
 
-.vertex-count-label {
+.vertex-count-label,.triangle-side-count-label,.triangular-number-result-label {
   font-weight: bold;
   font-size: larger;
 }

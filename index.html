@@ -9,7 +9,7 @@
     <pre id="status-message" class="hidden"></pre>
     <section class="step">
       <p>
-        We're going to at interesting things:
+        We're going to look at a couple of cool mathematic concepts:
         <span class="important-term">complete graphs</span> and
         <span class="important-term">triangular numbers</span>. We are also
         going to look at a relationship that they share.
@@ -28,17 +28,17 @@
       </p>
 
       <svg
-        id="complete-graph-example-board"
+        class="complete-graph-board"
         width="500"
         height="500"
         viewBox="0 0 100 100"
       >
-        <g id="complete-graph-example-edge-root"></g>
-        <g id="complete-graph-example-vertex-root"></g>
+        <g class="graph-edge-root"></g>
+        <g class="graph-vertex-root"></g>
       </svg>
 
       <input
-        id="example-graph-vertices-control"
+        class="graph-vertices-control"
         type="range"
         value="3"
         min="1"
@@ -47,11 +47,6 @@
       />
       <p class="instruction">
         Move the slider to change the number of vertices (dots) in the graph.
-      </p>
-      <p>
-        As you increase the number of vertices, the number of edges (the lines)
-        increases far faster. We'll look more closely at that relationship
-        later.
       </p>
     </section>
 
@@ -89,8 +84,58 @@
       </p>
 
       <p>
-        Like the relationship between the vertices and edges in complete graphs, as you add dots per side, the triangular number increases far faster than the increase in dots per side.
+        Like the relationship between the vertices and edges in complete graphs,
+        as you add dots per side, the triangular number increases far faster
+        than the increase in dots per side.
       </p>
+    </section>
+
+    <hr />
+
+    <section class="step" id="v-e-relationship-step">
+      <p>
+        Let's look at the relationship between the vertices and edges in a
+        complete graph now. Here is a complete graph for
+        <span class="vertex-count-label">3</span> vertices again:
+      </p>
+
+      <svg
+        class="complete-graph-board"
+        width="500"
+        height="500"
+        viewBox="0 0 100 100"
+      >
+        <g class="graph-edge-root"></g>
+        <g class="graph-vertex-root"></g>
+      </svg>
+
+      <input
+        class="graph-vertices-control"
+        type="range"
+        value="3"
+        min="1"
+        max="25"
+        step="0.1"
+      />
+      <p class="instruction">
+        Move the slider to change the number of vertices (dots) in the graph.
+      </p>
+      <p>
+        When you add a vertex (a dot), the number of edges (lines) also
+        increases. But &mdash; except when going from 0 vertices to 1 or from
+        one vertex to two &mdash; the increase in edges is always greater than
+        the increase in vertices.
+      </p>
+      <p>
+        For example, move the slider above so that there are 2 vertices. Count
+        the edges. Then, move the slider so that there are 3 vertices. Count the
+        edges.
+      </p>
+      <p>
+        That change increased the number of vertices by 1, but increased the
+        number of edges by <em>2</em>.
+      </p>
+      <p>TODO: Change in e increase.</p>
     </section>
 
     <section class="step">
