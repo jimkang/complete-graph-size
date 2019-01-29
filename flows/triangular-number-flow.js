@@ -2,7 +2,7 @@ var controlInitialized = false;
 var triangularSideControl = document.getElementById(
   'triangle-side-length-control'
 );
-var triangleSideCountLabel = document.querySelector(
+var triangleSideCountLabels = document.querySelectorAll(
   '#triangular-number-step .triangle-side-count-label'
 );
 var resultLabel = document.querySelector(
@@ -18,7 +18,9 @@ function triangularNumberFlow() {
   }
 
   var pointsPerSide = Math.round(+triangularSideControl.value);
-  triangleSideCountLabel.textContent = pointsPerSide;
+  for (var i = 0; i < triangleSideCountLabels.length; ++i) {
+    triangleSideCountLabels[i].textContent = pointsPerSide;
+  }
   resultLabel.textContent = getTriangularNumber(pointsPerSide);
   var pyramid = getPyramid({
     pointsPerSide,
