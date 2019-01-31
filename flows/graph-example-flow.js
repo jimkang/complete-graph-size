@@ -5,24 +5,30 @@ var getCompleteGraph = require('../get-complete-graph');
 var colorScales = require('d3-scale-chromatic');
 var curry = require('lodash.curry');
 
-function GraphExampleFlow({ stepSelector }) {
+function GraphExampleFlow({ containerSelector, fixedNumberOfVertices }) {
   var controlInitialized = false;
   var exampleGraphVerticesControl = document.querySelector(
-    stepSelector + ' .graph-vertices-control'
+    containerSelector + ' .graph-vertices-control'
   );
   var vertexCountLabel = document.querySelector(
-    stepSelector + ' .vertex-count-label'
+    containerSelector + ' .vertex-count-label'
   );
   return graphExampleFlow;
 
   function graphExampleFlow() {
-    if (!controlInitialized) {
+    if (!controlInitialized && exampleGraphVerticesControl) {
       exampleGraphVerticesControl.addEventListener('change', graphExampleFlow);
       controlInitialized = true;
     }
 
-    var numberOfVertices = Math.round(+exampleGraphVerticesControl.value);
-    vertexCountLabel.textContent = numberOfVertices;
+    var numberOfVertices;
+    if (isNaN(fixedNumberOfVertices)) {
+      numberOfVertices = Math.round(+exampleGraphVerticesControl.value);
+      vertexCountLabel.textContent = numberOfVertices;
+    } else {
+      numberOfVertices = fixedNumberOfVertices;
+    }
+
     var vertices = getCompleteGraphVertexPositions({
       numberOfVertices,
       width: 100,
@@ -34,14 +40,14 @@ function GraphExampleFlow({ stepSelector }) {
     renderEdges({
       edges,
       className: 'graph-edge',
-      rootSelector: stepSelector + ' .graph-edge-root',
+      rootSelector: containerSelector + ' .graph-edge-root',
       colorAccessor: curry(getEdgeColor)(edges.length) // 'rgb(237, 121, 83)'
     });
 
     renderPoints({
       points: vertices,
       className: 'graph-vertex',
-      rootSelector: stepSelector + ' .graph-vertex-root',
+      rootSelector: containerSelector + ' .graph-vertex-root',
       labelAccessor: getIndex
     });
   }

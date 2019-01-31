@@ -4,18 +4,33 @@ var triangularNumberFlow = require('./flows/triangular-number-flow');
 var introFlow = require('./flows/intro-flow');
 
 var graphExampleFlow = GraphExampleFlow({
-  stepSelector: '#complete-graph-step'
+  containerSelector: '#adjustable-graph'
 });
-var veRelationshipGraphFlow = GraphExampleFlow({
-  stepSelector: '#v-e-relationship-step'
+// var veRelationshipGraphFlow = GraphExampleFlow({
+//   containerSelector: '#v-e-relationship-step'
+// });
+var staticGraphExample1Flow = GraphExampleFlow({
+  containerSelector: '#static-graph-1',
+  fixedNumberOfVertices: 3
+});
+var staticGraphExample2Flow = GraphExampleFlow({
+  containerSelector: '#static-graph-2',
+  fixedNumberOfVertices: 4
+});
+var staticGraphExample3Flow = GraphExampleFlow({
+  containerSelector: '#static-graph-3',
+  fixedNumberOfVertices: 5
 });
 
 (function go() {
   window.onerror = reportTopLevelError;
   introFlow();
   graphExampleFlow();
+  staticGraphExample1Flow();
+  staticGraphExample2Flow();
+  staticGraphExample3Flow();
   triangularNumberFlow();
-  veRelationshipGraphFlow();
+  //   veRelationshipGraphFlow();
 })();
 
 function reportTopLevelError(msg, url, lineNo, columnNo, error) {

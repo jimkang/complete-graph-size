@@ -7,7 +7,7 @@
   </head>
   <body>
     <pre id="status-message" class="hidden"></pre>
-<!--
+    <!--
     <section class="step">
       <p>
         We're going to look at a couple of cool concepts:
@@ -19,126 +19,114 @@
     <hr />
 -->
     <section class="step" id="complete-graph-step">
-      <p>
-        Here is a <span class="important-term">complete graph</span>! It's a graph in which every single
-        vertex is connected to ever other point in the graph by an edge.
-      </p>
+      <p>Here are some <span class="important-term">complete graphs</span>!</p>
 
-      <p>
-        This is a complete graph for
-        <span class="vertex-count-label">3</span> vertices:
-      </p>
+      <div class="compare-panels-container">
+        <div id="static-graph-1">
+          <p>
+            This is a complete graph for
+            <span class="vertex-count-label">3</span> vertices.
+            <svg
+              class="complete-graph-board"
+              width="320"
+              height="320"
+              viewBox="0 0 100 100"
+            >
+              <g class="graph-edge-root"></g>
+              <g class="graph-vertex-root"></g>
+            </svg>
+          </p>
+        </div>
 
-      <svg
-        class="complete-graph-board"
-        width="500"
-        height="500"
-        viewBox="0 0 100 100"
-      >
-        <g class="graph-edge-root"></g>
-        <g class="graph-vertex-root"></g>
-      </svg>
+        <div id="static-graph-2">
+          <p>
+            This is a complete graph for
+            <span class="vertex-count-label">4</span> vertices.
+            <svg
+              class="complete-graph-board"
+              width="320"
+              height="320"
+              viewBox="0 0 100 100"
+            >
+              <g class="graph-edge-root"></g>
+              <g class="graph-vertex-root"></g>
+            </svg>
+          </p>
+        </div>
 
-      <input
-        class="graph-vertices-control"
-        type="range"
-        value="3"
-        min="1"
-        max="25"
-        step="0.1"
-      />
-      <p class="instruction">
-        Move the slider to change the number of vertices (dots) in the graph.
+        <div id="static-graph-3">
+          <p>
+            This is a complete graph for
+            <span class="vertex-count-label">5</span> vertices.
+            <svg
+              class="complete-graph-board"
+              width="320"
+              height="320"
+              viewBox="0 0 100 100"
+            >
+              <g class="graph-edge-root"></g>
+              <g class="graph-vertex-root"></g>
+            </svg>
+          </p>
+        </div>
+      </div>
+
+      <p class="key-point important-term">
+        A complete graph is a graph in which every single vertex is connected to
+        ever other point in the graph by an edge.
       </p>
       <p>
         Note that, most of the time, there's more edges (lines) than vertices
-        (edges). More on that later!
+        (dots). For example:
       </p>
-    </section>
 
-    <hr />
+      <section id="adjustable-graph">
+        <p>
+          This is a complete graph for
+          <span class="vertex-count-label">3</span> vertices:
+        </p>
 
-    <section class="step" id="triangular-number-step">
-      <p>Now, let's talk about what a "triangular number" is.</p>
+        <svg
+          class="complete-graph-board"
+          width="500"
+          height="500"
+          viewBox="0 0 100 100"
+        >
+          <g class="graph-edge-root"></g>
+          <g class="graph-vertex-root"></g>
+        </svg>
+
+        <input
+          class="graph-vertices-control"
+          type="range"
+          value="3"
+          min="1"
+          max="25"
+          step="0.1"
+        />
+        <p class="instruction">
+          Move the slider to change the number of vertices (dots) in the graph.
+        </p>
+        <p class="instruction">
+          Move the slider so that there are 2 vertices. Count the edges. Then,
+          move the slider so that there are 3 vertices. Count the edges.
+        </p>
+      </section>
+
       <p>
-        If you have <span class="triangle-side-count-label">3</span> dots per
-        side in an equilateral triangle like the one below, the triangular
-        number is <span class="triangular-number-result-label">6</span> &mdash;
-        the total number of dots in the triangle.
-      </p>
-      <svg
-        id="triangular-number-board"
-        width="600"
-        height="500"
-        viewBox="0 0 120 100"
-      >
-        <g id="triangle-row-root"></g>
-        <g id="triangle-dot-root"></g>
-      </svg>
-
-      <input
-        id="triangle-side-length-control"
-        type="range"
-        value="3"
-        min="1"
-        max="25"
-        step="0.1"
-      />
-
-      <p class="instruction">
-        Move the slider to change the number of dots per side.<br />
-        Current dots per side: <span class="triangle-side-count-label">3</span>
-      </p>
-      <p>
-        Like the relationship between the vertices and edges in complete graphs,
-        adding one dot to a side usually adds <em>more</em> than one dot to the
-        total number of dots in the triangle. Use the slider above to compare total number of dots for 2 dots per side and for 3 dots per side.
-      </p>
-    </section>
-
-    <hr />
-
-    <section class="step" id="v-e-relationship-step">
-      <p>
-        Let's look more closely at the relationship between the vertices and edges in a
-        complete graph now. Here is a complete graph for
-        <span class="vertex-count-label">3</span> vertices again:
-      </p>
-
-      <svg
-        class="complete-graph-board"
-        width="500"
-        height="500"
-        viewBox="0 0 100 100"
-      >
-        <g class="graph-edge-root"></g>
-        <g class="graph-vertex-root"></g>
-      </svg>
-
-      <input
-        class="graph-vertices-control"
-        type="range"
-        value="3"
-        min="1"
-        max="25"
-        step="0.1"
-      />
-      <p class="instruction">
-        Move the slider so that there are 2 vertices. Count
-        the edges. Then, move the slider so that there are 3 vertices. Count the
-        edges.
-      </p>
-      <p>
-        Going from 2 to 3 vertices increased the number of vertices by 1, but increased the
-        number of edges by <em>2</em>.
+        Going from 2 to 3 vertices increased the number of vertices by 1, but
+        increased the number of edges by <em>2</em>.
       </p>
       <p>
         When you add a vertex (a dot), the number of edges (lines) also
         increases. But &mdash; except when going from 0 vertices to 1 or from
-        one vertex to two &mdash; <em>the increase in edges is always greater than
-        the increase in vertices.</em>
+        one vertex to two &mdash;
+        <em
+          >the increase in edges is always greater than the increase in
+          vertices.</em
+        >
       </p>
-      <p>In fact, here's a table TODO: Table, Animated add of vertex
+      <p>In fact, here's a table TODO: Table, Animated add of vertex</p>
     </section>
 
     <section class="step">
@@ -281,6 +269,48 @@
       </p>
 -->
     </section>
+
+    <section class="step" id="triangular-number-step">
+      <p>Now, let's talk about what a "triangular number" is.</p>
+      <p>
+        If you have <span class="triangle-side-count-label">3</span> dots per
+        side in an equilateral triangle like the one below, the triangular
+        number is <span class="triangular-number-result-label">6</span> &mdash;
+        the total number of dots in the triangle.
+      </p>
+      <svg
+        id="triangular-number-board"
+        width="600"
+        height="500"
+        viewBox="0 0 120 100"
+      >
+        <g id="triangle-row-root"></g>
+        <g id="triangle-dot-root"></g>
+      </svg>
+
+      <input
+        id="triangle-side-length-control"
+        type="range"
+        value="3"
+        min="1"
+        max="25"
+        step="0.1"
+      />
+
+      <p class="instruction">
+        Move the slider to change the number of dots per side.<br />
+        Current dots per side: <span class="triangle-side-count-label">3</span>
+      </p>
+      <p>
+        Like the relationship between the vertices and edges in complete graphs,
+        adding one dot to a side usually adds <em>more</em> than one dot to the
+        total number of dots in the triangle. Use the slider above to compare
+        total number of dots for 2 dots per side and for 3 dots per side.
+      </p>
+    </section>
+
+    <hr />
+
     <div id="explanation-field" class="hidden"></div>
 
     <script src="index.js"></script>
