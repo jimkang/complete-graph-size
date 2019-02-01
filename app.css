@@ -158,6 +158,23 @@ svg text {
   align-items: center;
 }
 
+.step table {
+  border: solid 2px #666;
+  width: 22em;
+  border-collapse: collapse;
+}
+
+.step table thead {
+  font-weight: bold;
+}
+
+.step table td {
+  border: solid 1px #666;
+  text-align: end;
+  padding: 0.25em;
+  width: 33%;
+}
+
 @media all and (max-height: 568px) {
   body {
     font-size: 18px;

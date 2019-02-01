@@ -13,11 +13,21 @@ function GraphExampleFlow({ containerSelector, fixedNumberOfVertices }) {
   var vertexCountLabel = document.querySelector(
     containerSelector + ' .vertex-count-label'
   );
+  var showDerivationsButton = document.querySelector(
+    containerSelector + ' .show-derivations-button'
+  );
+  var derivationCells = document.querySelectorAll(
+    containerSelector + ' .derivation'
+  );
   return graphExampleFlow;
 
   function graphExampleFlow() {
     if (!controlInitialized && exampleGraphVerticesControl) {
       exampleGraphVerticesControl.addEventListener('change', graphExampleFlow);
+      showDerivationsButton.addEventListener(
+        'click',
+        toggleDerivationVisibility
+      );
       controlInitialized = true;
     }
 
@@ -50,6 +60,19 @@ function GraphExampleFlow({ containerSelector, fixedNumberOfVertices }) {
       rootSelector: containerSelector + ' .graph-vertex-root',
       labelAccessor: getIndex
     });
+  }
+
+  function toggleDerivationVisibility() {
+    var derivationExampleCell = derivationCells[0];
+    var opName = 'add';
+    showDerivationsButton.textContent = 'Show derivations of edge counts';
+    if (derivationExampleCell.classList.contains('hidden')) {
+      opName = 'remove';
+      showDerivationsButton.textContent = 'Hide derivations of edge counts';
+    }
+    for (var i = 0; i < derivationCells.length; ++i) {
+      derivationCells[i].classList[opName]('hidden');
+    }
   }
 }
 

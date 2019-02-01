@@ -105,30 +105,102 @@
           step="0.1"
         />
         <p class="instruction">
-          Move the slider to change the number of vertices (dots) in the graph.
-        </p>
-        <p class="instruction">
           Move the slider so that there are 2 vertices. Count the edges. Then,
           move the slider so that there are 3 vertices. Count the edges.
         </p>
+
+        <p>
+          Going from 2 to 3 vertices increases the number of vertices in the
+          graph by <strong>1</strong>, but increases the number of edges by
+          <strong>2</strong>.
+        </p>
+        <p>
+          When you add a vertex (a dot), the number of edges (lines) also
+          increases. But (except when going from 0 vertices to 1 or from one
+          vertex to two)
+          <em
+            >the increase in edges is always greater than the increase in
+            vertices.</em
+          >
+        </p>
+        <p>
+          Here is a table with the edge counts for complete graphs with given
+          numbers of vertices.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <td>Vertices</td>
+              <td>Edges</td>
+              <td class="derivation hidden">Derivation</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>0</td>
+              <td class="derivation hidden"></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>1</td>
+              <td class="derivation hidden">1 + 0</td>
+            </tr>
+
+            <tr>
+              <td>3</td>
+              <td>3</td>
+              <td class="derivation hidden">2 + 1</td>
+            </tr>
+
+            <tr>
+              <td>4</td>
+              <td>6</td>
+              <td class="derivation hidden">3 + 3</td>
+            </tr>
+
+            <tr>
+              <td>5</td>
+              <td>10</td>
+              <td class="derivation hidden">4 + 6</td>
+            </tr>
+
+            <tr>
+              <td>6</td>
+              <td>15</td>
+              <td class="derivation hidden">5 + 10</td>
+            </tr>
+
+            <tr>
+              <td>7</td>
+              <td>22</td>
+              <td class="derivation hidden">6 + 15</td>
+            </tr>
+
+            <tr>
+              <td>8</td>
+              <td>30</td>
+              <td class="derivation hidden">7 + 22</td>
+            </tr>
+
+            <tr>
+              <td>9</td>
+              <td>38</td>
+              <td class="derivation hidden">8 + 30</td>
+            </tr>
+
+            <tr>
+              <td>10</td>
+              <td>47</td>
+              <td class="derivation hidden">9 + 38</td>
+            </tr>
+          </tbody>
+        </table>
+        <button class="show-derivations-button">
+          Show derivations of edge counts
+        </button>
       </section>
-
-      <p>
-        Going from 2 to 3 vertices increased the number of vertices by 1, but
-        increased the number of edges by <em>2</em>.
-      </p>
-      <p>
-        When you add a vertex (a dot), the number of edges (lines) also
-        increases. But &mdash; except when going from 0 vertices to 1 or from
-        one vertex to two &mdash;
-        <em
-          >the increase in edges is always greater than the increase in
-          vertices.</em
-        >
-      </p>
-      <p>In fact, here's a table TODO: Table, Animated add of vertex</p>
     </section>
-
     <section class="step">
       <div class="compare-panels-container">
         <div>
