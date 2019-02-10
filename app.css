@@ -115,6 +115,13 @@ svg text {
   align-items: center;
 }
 
+.graph-panel {
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .side-caption-with-svg {
   display: flex;
   align-items: center;
@@ -140,6 +147,7 @@ svg text {
 
 .key-point {
   text-align: center;
+  background-color: #c0feb4;
 }
 
 .exhortation {
@@ -150,6 +158,8 @@ svg text {
 .important-term {
   font-style: italic;
   font-size: 1.4em;
+  padding: 0.5em;
+  border-radius: 0.5em;
 }
 
 #adjustable-graph {
