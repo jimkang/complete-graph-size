@@ -7,29 +7,18 @@
   </head>
   <body>
     <pre id="status-message" class="hidden"></pre>
-    <!--
-    <section class="step">
-      <p>
-        We're going to look at a couple of cool concepts:
-        <span class="important-term">complete graphs</span> and
-        <span class="important-term">triangular numbers</span>. We are also
-        going to look at a relationship that they share.
-      </p>
-    </section>
-    <hr />
--->
+
     <section class="step" id="complete-graph-step">
-      <p>
-        In graph theory, there is a concept called the
-        <span class="important-term">complete graph</span>. Before we talk about
-        what we can do with one, let's look at what a complete graph is.
-      </p>
+      <p>Let's start simply. Here is a vertex:</p>
 
-      <div id="static-graph-1" class="graph-panel">
-        <p>
-          This is a complete graph for
-          <span class="vertex-count-label">3</span> vertices. (The vertices are the dots.)
-        </p>
+      <svg width="250" height="250" viewBox="0 0 100 100">
+        <g class="graph-vertex"><circle cx="50" cy="50" r="2"></circle></g>
+      </svg>
+
+      <p>Vertices (plural of vertex) are represented as dots.</p>
+
+      <div id="edge-example-container">
+        <p>Here is an edge:</p>
         <svg
           class="complete-graph-board"
           width="320"
@@ -39,170 +28,136 @@
           <g class="graph-edge-root"></g>
           <g class="graph-vertex-root"></g>
         </svg>
-      </div>
-
-      <div id="static-graph-2" class="graph-panel">
-        <p>
-          This is a complete graph for
-          <span class="vertex-count-label">4</span> vertices.
-        </p>
-        <svg
-          class="complete-graph-board"
-          width="320"
-          height="320"
-          viewBox="0 0 100 100"
-        >
-          <g class="graph-edge-root"></g>
-          <g class="graph-vertex-root"></g>
-        </svg>
-      </div>
-
-      <div id="static-graph-3" class="graph-panel">
-        <p>
-          This is a complete graph for
-          <span class="vertex-count-label">5</span> vertices.
-        </p>
-        <svg
-          class="complete-graph-board"
-          width="320"
-          height="320"
-          viewBox="0 0 100 100"
-        >
-          <g class="graph-edge-root"></g>
-          <g class="graph-vertex-root"></g>
-        </svg>
+        <p>Edges are represented as lines that connect two vertices.</p>
       </div>
 
       <p class="key-point important-term">
-        A complete graph is a graph in which every vertex is connected to
-        ever other vertex in the graph by an edge.
+        A complete graph is a graph in which every vertex is connected to ever
+        other vertex in the graph by an edge.
       </p>
-      <p>
-        Note that, most of the time, there's more edges (lines) than vertices
-        (dots). For example:
-      </p>
-
-      <section id="adjustable-graph">
-        <p>
-          This is a complete graph for
-          <span class="vertex-count-label">3</span> vertices:
-        </p>
-
-        <svg
-          class="complete-graph-board"
-          width="500"
-          height="500"
-          viewBox="0 0 100 100"
-        >
-          <g class="graph-edge-root"></g>
-          <g class="graph-vertex-root"></g>
-        </svg>
-
-        <input
-          class="graph-vertices-control"
-          type="range"
-          value="3"
-          min="1"
-          max="25"
-          step="0.1"
-        />
-        <p class="instruction">
-          Move the slider so that there are 2 vertices. Count the edges. Then,
-          move the slider so that there are 3 vertices. Count the edges.
-        </p>
-
-        <p>
-          Going from 2 to 3 vertices increases the number of vertices in the
-          graph by <strong>1</strong>, but increases the number of edges by
-          <strong>2</strong>.
-        </p>
-        <p>
-          When you add a vertex (a dot), the number of edges (lines) also
-          increases. But (except when going from 0 vertices to 1 or from one
-          vertex to two)
-          <em
-            >the increase in edges is always greater than the increase in
-            vertices.</em
-          >
-        </p>
-        <p>
-          Here is a table with the edge counts for complete graphs with given
-          numbers of vertices.
-        </p>
-        <table>
-          <thead>
-            <tr>
-              <td>Vertices</td>
-              <td>Edges</td>
-              <td class="derivation hidden">Derivation</td>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>0</td>
-              <td class="derivation hidden"></td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>1</td>
-              <td class="derivation hidden">1 + 0</td>
-            </tr>
-
-            <tr>
-              <td>3</td>
-              <td>3</td>
-              <td class="derivation hidden">2 + 1</td>
-            </tr>
-
-            <tr>
-              <td>4</td>
-              <td>6</td>
-              <td class="derivation hidden">3 + 3</td>
-            </tr>
-
-            <tr>
-              <td>5</td>
-              <td>10</td>
-              <td class="derivation hidden">4 + 6</td>
-            </tr>
-
-            <tr>
-              <td>6</td>
-              <td>15</td>
-              <td class="derivation hidden">5 + 10</td>
-            </tr>
-
-            <tr>
-              <td>7</td>
-              <td>22</td>
-              <td class="derivation hidden">6 + 15</td>
-            </tr>
-
-            <tr>
-              <td>8</td>
-              <td>30</td>
-              <td class="derivation hidden">7 + 22</td>
-            </tr>
-
-            <tr>
-              <td>9</td>
-              <td>38</td>
-              <td class="derivation hidden">8 + 30</td>
-            </tr>
-
-            <tr>
-              <td>10</td>
-              <td>47</td>
-              <td class="derivation hidden">9 + 38</td>
-            </tr>
-          </tbody>
-        </table>
-        <button class="show-derivations-button">
-          Show derivations of edge counts
-        </button>
-      </section>
     </section>
+
+    <section id="adjustable-graph">
+      <p>
+        For example, this is a complete graph for
+        <span class="vertex-count-label">3</span> vertices:
+      </p>
+
+      <svg
+        class="complete-graph-board"
+        width="500"
+        height="500"
+        viewBox="0 0 100 100"
+      >
+        <g class="graph-edge-root"></g>
+        <g class="graph-vertex-root"></g>
+      </svg>
+
+      <input
+        class="graph-vertices-control"
+        type="range"
+        value="3"
+        min="1"
+        max="25"
+        step="0.1"
+      />
+      <p class="instruction">
+        Move the the slider and see what happens to the change in the number of
+        edges relative to the change in the number of vertices.
+      </p>
+
+      <p>
+        Going from 2 to 3 vertices increases the number of vertices in the graph
+        by <strong>1</strong>, but increases the number of edges by
+        <strong>2</strong>.
+      </p>
+
+      <p>
+        Here is a table with the edge counts for complete graphs with given
+        numbers of vertices.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <td>Vertices</td>
+            <td>Edges</td>
+            <td class="derivation hidden">Derivation</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>0</td>
+            <td class="derivation hidden"></td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>1</td>
+            <td class="derivation hidden">1 + 0</td>
+          </tr>
+
+          <tr>
+            <td>3</td>
+            <td>3</td>
+            <td class="derivation hidden">2 + 1</td>
+          </tr>
+
+          <tr>
+            <td>4</td>
+            <td>6</td>
+            <td class="derivation hidden">3 + 3</td>
+          </tr>
+
+          <tr>
+            <td>5</td>
+            <td>10</td>
+            <td class="derivation hidden">4 + 6</td>
+          </tr>
+
+          <tr>
+            <td>6</td>
+            <td>15</td>
+            <td class="derivation hidden">5 + 10</td>
+          </tr>
+
+          <tr>
+            <td>7</td>
+            <td>22</td>
+            <td class="derivation hidden">6 + 15</td>
+          </tr>
+
+          <tr>
+            <td>8</td>
+            <td>30</td>
+            <td class="derivation hidden">7 + 22</td>
+          </tr>
+
+          <tr>
+            <td>9</td>
+            <td>38</td>
+            <td class="derivation hidden">8 + 30</td>
+          </tr>
+
+          <tr>
+            <td>10</td>
+            <td>47</td>
+            <td class="derivation hidden">9 + 38</td>
+          </tr>
+        </tbody>
+      </table>
+      <button class="show-derivations-button">
+        Show derivations of edge counts
+      </button>
+      <p>
+        When you add a vertex, the number of edges also increases. But (except
+        when going from 0 vertices to 1 or from one vertex to two)
+        <em
+          >the increase in edges is always greater than the increase in
+          vertices.</em
+        >
+      </p>
+    </section>
+
     <section class="step">
       <div class="compare-panels-container">
         <div>

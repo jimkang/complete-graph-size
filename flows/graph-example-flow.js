@@ -5,7 +5,11 @@ var getCompleteGraph = require('../get-complete-graph');
 var colorScales = require('d3-scale-chromatic');
 var curry = require('lodash.curry');
 
-function GraphExampleFlow({ containerSelector, fixedNumberOfVertices }) {
+function GraphExampleFlow({
+  containerSelector,
+  fixedNumberOfVertices,
+  labelVertices = true
+}) {
   var controlInitialized = false;
   var exampleGraphVerticesControl = document.querySelector(
     containerSelector + ' .graph-vertices-control'
@@ -58,7 +62,7 @@ function GraphExampleFlow({ containerSelector, fixedNumberOfVertices }) {
       points: vertices,
       className: 'graph-vertex',
       rootSelector: containerSelector + ' .graph-vertex-root',
-      labelAccessor: getIndex
+      labelAccessor: labelVertices ? getIndex : undefined
     });
   }
 

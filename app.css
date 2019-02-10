@@ -68,6 +68,10 @@ button {
   text-align: center;
 }
 
+.instruction ol,ul {
+  text-align: left;
+}
+
 .vertex-count-label,.triangle-side-count-label,.triangular-number-result-label {
   font-weight: bold;
   font-size: larger;
@@ -148,6 +152,8 @@ svg text {
 .key-point {
   text-align: center;
   background-color: #c0feb4;
+  padding: 0.5em;
+  border-radius: 0.5em;
 }
 
 .exhortation {
@@ -158,8 +164,8 @@ svg text {
 .important-term {
   font-style: italic;
   font-size: 1.4em;
-  padding: 0.5em;
-  border-radius: 0.5em;
+  /*! padding: 0.5em; */
+  /*! border-radius: 0.5em; */
 }
 
 #adjustable-graph {
