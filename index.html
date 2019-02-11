@@ -31,6 +31,60 @@
         <p>Edges are represented as lines that connect two vertices.</p>
       </div>
 
+      <div>
+        <p>A graph is a collection of vertices and edges. For example:</p>
+        <svg
+          class="complete-graph-board"
+          width="320"
+          height="320"
+          viewBox="0 0 100 100"
+        >
+          <g class="graph-edge-root">
+            <line
+              class="graph-edge"
+              x1="95"
+              y1="50"
+              x2="5"
+              y2="50"
+              stroke="#440154"
+            ></line>
+            <line
+              class="graph-edge"
+              x1="5"
+              y1="50"
+              x2="95"
+              y2="50"
+              stroke="#21918c"
+            ></line>
+            <line
+              class="graph-edge"
+              x1="30"
+              y1="10"
+              x2="60"
+              y2="70"
+              stroke="#21918c"
+            ></line>
+          </g>
+          <g class="graph-vertex-root">
+            <g class="graph-vertex" transform="translate(95, 50)">
+              <circle r="1" cx="0" cy="0"></circle>
+            </g>
+            <g class="graph-vertex" transform="translate(5, 50)">
+              <circle r="1" cx="0" cy="0"></circle>
+            </g>
+            <g class="graph-vertex" transform="translate(30, 10)">
+              <circle r="1" cx="0" cy="0"></circle>
+            </g>
+            <g class="graph-vertex" transform="translate(60, 70)">
+              <circle r="1" cx="0" cy="0"></circle>
+            </g>
+            <g class="graph-vertex" transform="translate(65, 30)">
+              <circle r="1" cx="0" cy="0"></circle>
+            </g>
+          </g>
+        </svg>
+      </div>
+
       <p class="key-point important-term">
         A complete graph is a graph in which every vertex is connected to ever
         other vertex in the graph by an edge.
