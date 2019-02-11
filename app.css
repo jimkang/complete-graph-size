@@ -191,6 +191,38 @@ svg text {
   width: 33%;
 }
 
+/* TODO: This needs some sort of divergent color scheme. */
+.band-1 {
+  background-color: rgb(253, 231, 37);
+}
+.band-2 {
+  background-color: rgb(216, 226, 25);
+}
+.band-3 {
+  background-color: rgb(176, 221, 47);
+}
+.band-4 {
+  background-color: rgb(137, 213, 72);
+}
+.band-5 {
+  background-color: rgb(101, 203, 94);
+}
+.band-6 {
+  background-color: rgb(70, 192, 111);
+}
+.band-7 {
+  background-color: rgb(46, 179, 124);
+}
+.band-8 {
+  background-color: rgb(33, 165, 133);
+}
+.band-9 {
+  background-color: rgb(31, 151, 139);
+}
+.band-10 {
+  background-color: rgb(35, 137, 142);
+}
+
 @media all and (max-height: 568px) {
   body {
     font-size: 18px;

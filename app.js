@@ -4,7 +4,7 @@ var triangularNumberFlow = require('./flows/triangular-number-flow');
 var introFlow = require('./flows/intro-flow');
 
 var graphExampleFlow = GraphExampleFlow({
-  containerSelector: '#adjustable-graph'
+  containerSelector: '#complete-graph-step'
 });
 // var veRelationshipGraphFlow = GraphExampleFlow({
 //   containerSelector: '#v-e-relationship-step'

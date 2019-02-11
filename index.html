@@ -8,7 +8,7 @@
   <body>
     <pre id="status-message" class="hidden"></pre>
 
-    <section class="step" id="complete-graph-step">
+    <section class="step" id="vertex-step">
       <p>Let's start simply. Here is a vertex:</p>
 
       <svg width="250" height="250" viewBox="0 0 100 100">
@@ -16,7 +16,9 @@
       </svg>
 
       <p>Vertices (plural of vertex) are represented as dots.</p>
+    </section>
 
+    <section class="step" id="edge-step">
       <div id="edge-example-container">
         <p>Here is an edge:</p>
         <svg
@@ -30,7 +32,9 @@
         </svg>
         <p>Edges are represented as lines that connect two vertices.</p>
       </div>
+    </section>
 
+    <section class="step" id="graph-step">
       <div>
         <p>A graph is a collection of vertices and edges. For example:</p>
         <svg
@@ -84,14 +88,14 @@
           </g>
         </svg>
       </div>
+    </section>
 
+    <section class="step" id="complete-graph-step">
       <p class="key-point important-term">
         A complete graph is a graph in which every vertex is connected to ever
         other vertex in the graph by an edge.
       </p>
-    </section>
 
-    <section id="adjustable-graph">
       <p>
         For example, this is a complete graph for
         <span class="vertex-count-label">3</span> vertices:
@@ -140,62 +144,62 @@
         </thead>
         <tbody>
           <tr>
-            <td>1</td>
-            <td>0</td>
+            <td class="band-1">1</td>
+            <td class="band-1">0</td>
             <td class="derivation hidden"></td>
           </tr>
           <tr>
-            <td>2</td>
-            <td>1</td>
-            <td class="derivation hidden">1 + 0</td>
+            <td class="band-2">2</td>
+            <td class="band-2">1</td>
+            <td class="band-1 derivation hidden">1 + 0</td>
           </tr>
 
           <tr>
-            <td>3</td>
-            <td>3</td>
-            <td class="derivation hidden">2 + 1</td>
+            <td class="band-3">3</td>
+            <td class="band-3">3</td>
+            <td class="band-2 derivation hidden">2 + 1</td>
           </tr>
 
           <tr>
-            <td>4</td>
-            <td>6</td>
-            <td class="derivation hidden">3 + 3</td>
+            <td class="band-4">4</td>
+            <td class="band-4">6</td>
+            <td class="band-3 derivation hidden">3 + 3</td>
           </tr>
 
           <tr>
-            <td>5</td>
-            <td>10</td>
-            <td class="derivation hidden">4 + 6</td>
+            <td class="band-5">5</td>
+            <td class="band-5">10</td>
+            <td class="band-4 derivation hidden">4 + 6</td>
           </tr>
 
           <tr>
-            <td>6</td>
-            <td>15</td>
-            <td class="derivation hidden">5 + 10</td>
+            <td class="band-6">6</td>
+            <td class="band-6">15</td>
+            <td class="band-5 derivation hidden">5 + 10</td>
           </tr>
 
           <tr>
-            <td>7</td>
-            <td>22</td>
-            <td class="derivation hidden">6 + 15</td>
+            <td class="band-7">7</td>
+            <td class="band-7">22</td>
+            <td class="band-7 derivation hidden">6 + 15</td>
           </tr>
 
           <tr>
-            <td>8</td>
-            <td>30</td>
-            <td class="derivation hidden">7 + 22</td>
+            <td class="band-8">8</td>
+            <td class="band-8">30</td>
+            <td class="band-7 derivation hidden">7 + 22</td>
           </tr>
 
           <tr>
-            <td>9</td>
-            <td>38</td>
-            <td class="derivation hidden">8 + 30</td>
+            <td class="band-9">9</td>
+            <td class="band-9">38</td>
+            <td class="band-8 derivation hidden">8 + 30</td>
           </tr>
 
           <tr>
-            <td>10</td>
-            <td>47</td>
-            <td class="derivation hidden">9 + 38</td>
+            <td class="band-10">10</td>
+            <td class="band-10">47</td>
+            <td class="band-9 derivation hidden">9 + 38</td>
           </tr>
         </tbody>
       </table>
