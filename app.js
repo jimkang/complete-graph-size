@@ -1,6 +1,6 @@
 var handleError = require('handle-error-web');
 var GraphExampleFlow = require('./flows/graph-example-flow');
-var triangularNumberFlow = require('./flows/triangular-number-flow');
+//var triangularNumberFlow = require('./flows/triangular-number-flow');
 var introFlow = require('./flows/intro-flow');
 var VERelationshipFlow = require('./flows/v-e-relationship-flow');
 
@@ -36,7 +36,7 @@ var edgeExampleFlow = GraphExampleFlow({
   staticGraphExample1Flow();
   staticGraphExample2Flow();
   staticGraphExample3Flow();
-  triangularNumberFlow();
+  //triangularNumberFlow();
   veRelationshipFlow();
 })();
 

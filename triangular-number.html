@@ -1,0 +1,197 @@
+<html>
+  <head>
+    <title>Complete graph size and the triangular series</title>
+    <link rel="stylesheet" href="app.css" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <pre id="status-message" class="hidden"></pre>
+
+    <section class="step">
+      <div class="compare-panels-container">
+        <div>
+          <div class="side-caption-with-svg">
+            <p>
+              How many edges (lines) are there in this "complete graph" with 21
+              vertices (dots)?
+            </p>
+            <svg id="small-intro-graph-board" viewBox="0 0 100 100">
+              <g class="graph-edge-root"></g>
+              <g class="graph-vertex-root"></g>
+            </svg>
+          </div>
+          <div>
+            <p>It's 210! There is an easy way to get this number:</p>
+            <p class="key-point">
+              It's
+              <span class="variable"
+                >(one less than the number of vertices)</span
+              >
+              times
+              <span class="variable">(the number of vertices)</span> divided by
+              2.
+            </p>
+          </div>
+          <p>
+            In this case, that's <strong>20 times 21 divided by 2</strong>,
+            which equals 210.
+          </p>
+        </div>
+        <div>
+          <div class="side-caption-with-svg">
+            <p>
+              How many dots are in this equilateral triangle with 20 dots on a
+              side?
+            </p>
+            <svg id="small-intro-triangular-number-board" viewBox="0 0 100 100">
+              <g class="triangle-row-root"></g>
+              <g class="triangle-dot-root"></g>
+            </svg>
+          </div>
+          <div>
+            <p>It's 210! There is an easy way to get this number:</p>
+            <p class="key-point">
+              It's
+              <span class="variable"
+                >(the number of dots on each side of the equilateral
+                triangle)</span
+              >
+              times
+              <span class="variable"
+                >(the number of dot on each side plus 1)</span
+              >
+              divided by 2.
+            </p>
+            <p>
+              In this case, that's <strong>20 times 21 divided by 2</strong>,
+              which equals 210.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        Both operations can be rephrased as
+        <strong>f(n) = n * (n + 1)/2</strong> It's a convenient function! It can
+        let you quickly count the edges in much larger complete graphs and get
+        the triangular number for far bigger numbers.
+      </div>
+      <div>
+        <div class="side-caption-with-svg">
+          <p>This complete graph has 101 vertices (dots).</p>
+          <svg id="big-intro-graph-board" viewBox="0 0 100 100">
+            <g class="graph-edge-root"></g>
+            <g class="graph-vertex-root"></g>
+          </svg>
+        </div>
+        <div>
+          <p>It's 210! There is an easy way to get this number:</p>
+          <p class="key-point">
+            It's
+            <span class="variable">(one less than the number of vertices)</span>
+            times <span class="variable">(the number of vertices)</span> divided
+            by 2.
+          </p>
+        </div>
+        <p>
+          In this case, that's <strong>20 times 21 divided by 2</strong>, which
+          equals 210.
+        </p>
+      </div>
+      <div>
+        <div class="side-caption-with-svg">
+          <p>This equilateral triangle has 100 dots on a side.</p>
+          <svg id="big-intro-triangular-number-board" viewBox="0 0 100 100">
+            <g class="triangle-row-root"></g>
+            <g class="triangle-dot-root"></g>
+          </svg>
+        </div>
+        <div>
+          <p>It's 210! There is an easy way to get this number:</p>
+          <p class="key-point">
+            It's
+            <span class="variable"
+              >(the number of dots on each side of the equilateral
+              triangle)</span
+            >
+            times
+            <span class="variable"
+              >(the number of dot on each side plus 1)</span
+            >
+            divided by 2.
+          </p>
+          <p>
+            In this case, that's <strong>20 times 21 divided by 2</strong>,
+            which equals 210.
+          </p>
+        </div>
+      </div>
+      <div>
+        But how can we trust it?
+        <span class="exhortation">Let's see why it works.</span>
+      </div>
+      <!--
+      <p>
+         
+        How do we know?
+        We are going to show that the number of edges in a
+        <a href="https://en.wikipedia.org/wiki/Complete_graph"
+          >complete graph</a
+        >
+        is equal to the sum of the
+        <a href="https://en.wikipedia.org/wiki/Triangular_number"
+          >triangular series</a
+        >
+        that goes up to one less than the number for vertices in the complete
+        graph.
+      </p>
+-->
+    </section>
+
+    <section class="step" id="triangular-number-step">
+      <p>Now, let's talk about what a "triangular number" is.</p>
+      <p>
+        If you have <span class="triangle-side-count-label">3</span> dots per
+        side in an equilateral triangle like the one below, the triangular
+        number is <span class="triangular-number-result-label">6</span> &mdash;
+        the total number of dots in the triangle.
+      </p>
+      <svg
+        id="triangular-number-board"
+        width="600"
+        height="500"
+        viewBox="0 0 120 100"
+      >
+        <g id="triangle-row-root"></g>
+        <g id="triangle-dot-root"></g>
+      </svg>
+
+      <input
+        id="triangle-side-length-control"
+        type="range"
+        value="3"
+        min="1"
+        max="25"
+        step="0.1"
+      />
+
+      <p class="instruction">
+        Move the slider to change the number of dots per side.<br />
+        Current dots per side: <span class="triangle-side-count-label">3</span>
+      </p>
+      <p>
+        Like the relationship between the vertices and edges in complete graphs,
+        adding one dot to a side usually adds <em>more</em> than one dot to the
+        total number of dots in the triangle. Use the slider above to compare
+        total number of dots for 2 dots per side and for 3 dots per side.
+      </p>
+    </section>
+
+    <hr />
+
+    <div id="explanation-field" class="hidden"></div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
