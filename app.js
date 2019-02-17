@@ -2,13 +2,14 @@ var handleError = require('handle-error-web');
 var GraphExampleFlow = require('./flows/graph-example-flow');
 var triangularNumberFlow = require('./flows/triangular-number-flow');
 var introFlow = require('./flows/intro-flow');
+var VERelationshipFlow = require('./flows/v-e-relationship-flow');
 
 var graphExampleFlow = GraphExampleFlow({
   containerSelector: '#complete-graph-step'
 });
-// var veRelationshipGraphFlow = GraphExampleFlow({
-//   containerSelector: '#v-e-relationship-step'
-// });
+var veRelationshipFlow = VERelationshipFlow({
+  containerSelector: '#v-e-relationship-step'
+});
 var staticGraphExample1Flow = GraphExampleFlow({
   containerSelector: '#static-graph-1',
   fixedNumberOfVertices: 3
@@ -36,7 +37,7 @@ var edgeExampleFlow = GraphExampleFlow({
   staticGraphExample2Flow();
   staticGraphExample3Flow();
   triangularNumberFlow();
-  //   veRelationshipGraphFlow();
+  veRelationshipFlow();
 })();
 
 function reportTopLevelError(msg, url, lineNo, columnNo, error) {
