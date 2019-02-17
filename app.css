@@ -1,5 +1,5 @@
 body {
-  font-size: 24pt;
+  font-size: 24px;
   font-family: futura, sans-serif;
   background-color: #fff;
   color: #666;
@@ -221,6 +221,15 @@ svg text {
 }
 .band-10 {
   background-color: rgb(35, 137, 142);
+}
+
+#edge-example-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#edge-example-container .complete-graph-board {
+  align-self: center;
 }
 
 @media all and (max-height: 568px) {
