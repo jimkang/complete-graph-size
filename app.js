@@ -5,7 +5,8 @@ var introFlow = require('./flows/intro-flow');
 var VERelationshipFlow = require('./flows/v-e-relationship-flow');
 
 var graphExampleFlow = GraphExampleFlow({
-  containerSelector: '#complete-graph-step'
+  containerSelector: '#complete-graph-step',
+  autoslide: true
 });
 var veRelationshipFlow = VERelationshipFlow({
   containerSelector: '#v-e-relationship-step'

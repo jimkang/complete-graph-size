@@ -8,7 +8,9 @@ var curry = require('lodash.curry');
 function GraphExampleFlow({
   containerSelector,
   fixedNumberOfVertices,
-  labelVertices = true
+  labelVertices = true,
+  autoslide = false,
+  autoslideInterval = 1000
 }) {
   var controlInitialized = false;
   var exampleGraphVerticesControl = document.querySelector(
@@ -17,11 +19,17 @@ function GraphExampleFlow({
   var vertexCountLabel = document.querySelector(
     containerSelector + ' .vertex-count-label'
   );
+  var autoslideDirection = 1;
+  var automoveTimeoutKey;
+
   return graphExampleFlow;
 
   function graphExampleFlow() {
     if (!controlInitialized && exampleGraphVerticesControl) {
-      exampleGraphVerticesControl.addEventListener('change', graphExampleFlow);
+      exampleGraphVerticesControl.addEventListener(
+        'change',
+        onVerticesControlChange
+      );
       controlInitialized = true;
     }
 
@@ -54,6 +62,32 @@ function GraphExampleFlow({
       rootSelector: containerSelector + ' .graph-vertex-root',
       labelAccessor: labelVertices ? getIndex : undefined
     });
+
+    if (autoslide) {
+      automoveTimeoutKey = setTimeout(automoveSlider, autoslideInterval);
+    }
+  }
+
+  function onVerticesControlChange() {
+    clearTimeout(automoveTimeoutKey);
+    autoslide = false;
+    graphExampleFlow();
+  }
+
+  function automoveSlider() {
+    var max = +exampleGraphVerticesControl.max;
+    var min = +exampleGraphVerticesControl.min;
+    var newVal = +exampleGraphVerticesControl.value + autoslideDirection;
+    if (autoslideDirection > 0 && newVal >= max) {
+      newVal = max;
+      autoslideDirection = -1;
+    }
+    if (autoslideDirection < 0 && newVal <= min) {
+      newVal = min;
+      autoslideDirection = 1;
+    }
+    exampleGraphVerticesControl.value = newVal;
+    setTimeout(graphExampleFlow, 0);
   }
 }
 
