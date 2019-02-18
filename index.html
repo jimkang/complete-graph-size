@@ -37,56 +37,29 @@
     <section class="step" id="graph-step">
       <div>
         <p>A <span class="important-term">graph</span> is a collection of vertices and edges. For example:</p>
+
         <svg
-          class="complete-graph-board"
-          width="320"
-          height="320"
+          id="rgb-1"
+          class="complete-graph-board random-graph-board"
+          width="100%"
+          height="500"
           viewBox="0 0 100 100"
         >
-          <g class="graph-edge-root">
-            <line
-              class="graph-edge"
-              x1="95"
-              y1="50"
-              x2="5"
-              y2="50"
-              stroke="#440154"
-            ></line>
-            <line
-              class="graph-edge"
-              x1="5"
-              y1="50"
-              x2="95"
-              y2="50"
-              stroke="#21918c"
-            ></line>
-            <line
-              class="graph-edge"
-              x1="30"
-              y1="10"
-              x2="60"
-              y2="70"
-              stroke="#21918c"
-            ></line>
-          </g>
-          <g class="graph-vertex-root">
-            <g class="graph-vertex" transform="translate(95, 50)">
-              <circle r="1" cx="0" cy="0"></circle>
-            </g>
-            <g class="graph-vertex" transform="translate(5, 50)">
-              <circle r="1" cx="0" cy="0"></circle>
-            </g>
-            <g class="graph-vertex" transform="translate(30, 10)">
-              <circle r="1" cx="0" cy="0"></circle>
-            </g>
-            <g class="graph-vertex" transform="translate(60, 70)">
-              <circle r="1" cx="0" cy="0"></circle>
-            </g>
-            <g class="graph-vertex" transform="translate(65, 30)">
-              <circle r="1" cx="0" cy="0"></circle>
-            </g>
-          </g>
+          <g class="graph-edge-root"></g>
+          <g class="graph-vertex-root"></g>
         </svg>
+
+        <svg
+          id="rgb-2"
+          class="complete-graph-board random-graph-board"
+          width="100%"
+          height="500"
+          viewBox="0 0 100 100"
+        >
+          <g class="graph-edge-root"></g>
+          <g class="graph-vertex-root"></g>
+        </svg>
+
       </div>
     </section>
 
@@ -97,7 +70,7 @@
       </p>
 
       <p>
-        For example, this is a complete graph for
+        This is a complete graph for
         <span class="vertex-count-label">3</span> vertices:
       </p>
 
@@ -120,8 +93,7 @@
         step="0.1"
       />
       <p class="instruction">
-        Move the slider and see what happens to the change in the number of
-        edges relative to the change in the number of vertices.
+        Move the slider to change in the number of vertices (which in turn will <em>really</em> change the number of edges).
       </p>
     </section>
 

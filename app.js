@@ -3,6 +3,7 @@ var GraphExampleFlow = require('./flows/graph-example-flow');
 //var triangularNumberFlow = require('./flows/triangular-number-flow');
 var introFlow = require('./flows/intro-flow');
 var VERelationshipFlow = require('./flows/v-e-relationship-flow');
+var RandomGraphFlow = require('./flows/random-graph-flow');
 
 var graphExampleFlow = GraphExampleFlow({
   containerSelector: '#complete-graph-step',
@@ -28,6 +29,9 @@ var edgeExampleFlow = GraphExampleFlow({
   fixedNumberOfVertices: 2,
   labelVertices: false
 });
+var randomGraphFlow = RandomGraphFlow({
+  containerSelector: '#graph-step'
+});
 
 (function go() {
   window.onerror = reportTopLevelError;
@@ -39,6 +43,7 @@ var edgeExampleFlow = GraphExampleFlow({
   staticGraphExample3Flow();
   //triangularNumberFlow();
   veRelationshipFlow();
+  randomGraphFlow();
 })();
 
 function reportTopLevelError(msg, url, lineNo, columnNo, error) {
