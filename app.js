@@ -4,6 +4,7 @@ var GraphExampleFlow = require('./flows/graph-example-flow');
 var introFlow = require('./flows/intro-flow');
 var VERelationshipFlow = require('./flows/v-e-relationship-flow');
 var RandomGraphFlow = require('./flows/random-graph-flow');
+var range = require('d3-array').range;
 
 var graphExampleFlow = GraphExampleFlow({
   containerSelector: '#complete-graph-step',
@@ -33,6 +34,13 @@ var randomGraphFlow = RandomGraphFlow({
   containerSelector: '#graph-step'
 });
 
+var veTableGraphFlows = range(1, 11).map(i =>
+  GraphExampleFlow({
+    containerSelector: `#table-graph-${i}`,
+    fixedNumberOfVertices: i
+  })
+);
+
 (function go() {
   window.onerror = reportTopLevelError;
   introFlow();
@@ -44,6 +52,7 @@ var randomGraphFlow = RandomGraphFlow({
   //triangularNumberFlow();
   veRelationshipFlow();
   randomGraphFlow();
+  veTableGraphFlows.forEach(f => f());
 })();
 
 function reportTopLevelError(msg, url, lineNo, columnNo, error) {

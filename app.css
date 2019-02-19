@@ -184,7 +184,7 @@ svg text {
 
 .step table {
   border: solid 2px #666;
-  width: 22em;
+  width: 100%;
   border-collapse: collapse;
 }
 
@@ -234,6 +234,10 @@ svg text {
 
 #v-e-relationship-step tbody td {
   color: white;
+}
+
+#v-e-relationship-step table .complete-graph-board .graph-edge {
+  stroke-width: 4;
 }
 
 #edge-example-container {
