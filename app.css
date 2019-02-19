@@ -11,6 +11,10 @@ body {
   justify-content: center;
 }
 
+p {
+  margin-top: 0;
+}
+
 .hidden {
   opacity: 0;
   transition: opacity 1s;
@@ -239,6 +243,11 @@ svg text {
 
 #edge-example-container .complete-graph-board {
   align-self: center;
+}
+
+.random-graph-board {
+  border: 2px dashed #aaa;
+  margin: 4px;
 }
 
 @media all and (max-height: 568px) {
