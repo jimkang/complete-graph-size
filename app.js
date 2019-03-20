@@ -28,6 +28,7 @@ var staticGraphExample3Flow = GraphExampleFlow({
 var edgeExampleFlow = GraphExampleFlow({
   containerSelector: '#edge-example-container',
   fixedNumberOfVertices: 2,
+  vertexRadius: 4,
   labelVertices: false
 });
 var randomGraphFlow = RandomGraphFlow({

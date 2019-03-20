@@ -51,12 +51,12 @@ button {
 .step {
   display: flex;
   flex-direction: column;
-  /*! align-items: center; */
   border: 1px solid #e950a1;
   border-radius: 0.5em;
   margin: 0.5em;
-  width: 40%;
+  width: 100%;
   min-width: 320px;
+  max-width: 40em;
   padding: 1em;
 }
 
@@ -111,6 +111,10 @@ svg text {
 }
 
 #triangular-number-board {
+}
+
+#edge-step .graph-edge{
+  stroke-width: 1;
 }
 
 .compare-panels-container {
@@ -170,10 +174,8 @@ svg text {
 }
 
 .important-term {
-  font-style: italic;
+  font-weight: bold;
   font-size: 1.4em;
-  /*! padding: 0.5em; */
-  /*! border-radius: 0.5em; */
 }
 
 #adjustable-graph {

@@ -9,6 +9,7 @@ function GraphExampleFlow({
   containerSelector,
   fixedNumberOfVertices,
   labelVertices = true,
+  vertexRadius,
   autoslide = false,
   autoslideInterval = 1000
 }) {
@@ -60,7 +61,8 @@ function GraphExampleFlow({
       points: vertices,
       className: 'graph-vertex',
       rootSelector: containerSelector + ' .graph-vertex-root',
-      labelAccessor: labelVertices ? getIndex : undefined
+      labelAccessor: labelVertices ? getIndex : undefined,
+      r: vertexRadius
     });
 
     if (autoslide) {
