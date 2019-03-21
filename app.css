@@ -257,6 +257,12 @@ svg text {
   margin: 4px;
 }
 
+.complete-graph-setting-link {
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+}
+
 @media all and (max-height: 568px) {
   body {
     font-size: 18px;

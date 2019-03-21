@@ -8,6 +8,11 @@
   <body>
     <pre id="status-message" class="hidden"></pre>
 
+    <section class="step" id="intro-step">
+      Placeholder: Don't forget to add a reason someone would want to know about
+      complete graph edge counts.
+    </section>
+
     <section class="step" id="vertex-step">
       <p>Here is a <span class="important-term">vertex</span>:</p>
 
@@ -36,7 +41,10 @@
 
     <section class="step" id="graph-step">
       <div>
-        <p>A <span class="important-term">graph</span> is a collection of vertices and edges. Here are two examples:</p>
+        <p>
+          A <span class="important-term">graph</span> is a collection of
+          vertices and edges. Here are two examples:
+        </p>
 
         <svg
           id="rgb-1"
@@ -49,7 +57,12 @@
           <g class="graph-vertex-root"></g>
         </svg>
 
-        <p>There is no requirement that vertices must be connected by edges, though, they <em>can</em> be connected by edges. There isn't even a requirement that there are any edges at all. A single vertex can be a graph.</p>
+        <p>
+          There is no requirement that vertices must be connected by edges,
+          though, they <em>can</em> be connected by edges. There isn't even a
+          requirement that there are any edges at all. A single vertex can be a
+          graph.
+        </p>
 
         <svg
           id="rgb-2"
@@ -61,14 +74,13 @@
           <g class="graph-edge-root"></g>
           <g class="graph-vertex-root"></g>
         </svg>
-
       </div>
     </section>
 
     <section class="step" id="complete-graph-step">
       <p>
-        A <span class="important-term">complete</span> graph is a graph in which every vertex is connected to every
-        other vertex in the graph by an edge.
+        A <span class="important-term">complete</span> graph is a graph in which
+        every vertex is connected to every other vertex in the graph by an edge.
       </p>
 
       <p>
@@ -95,17 +107,30 @@
         step="0.1"
       />
       <p class="instruction">
-        Move the slider to change in the number of vertices (which in turn will <em>really</em> change the number of edges).
+        Move the slider to change in the number of vertices (which in turn will
+        <em>really</em> change the number of edges).
       </p>
-      <p>Note that, generally, when you increase the number of vertices in a complete graph, the number of edges increases even more.
-        For example, going from 2 to 3 vertices increases the number of vertices in the graph
-        by <strong>1</strong>, but increases the number of edges by
-        <strong>2</strong>.
+      <p>
+        Generally, when you increase the number of vertices in a complete graph
+        by 1, the number of edges increases by <em>v + e</em>, where v is the
+        number of vertices you had before the increase, and e is the number
+        edges you had before the increase.
+      </p>
+      <p>
+        For example, increasing <em>v</em>, the number of vertices from
+        <a class="complete-graph-setting-link" data-setting="2">2</a> to
+        <a class="complete-graph-setting-link" data-setting="3">3</a> vertices
+        increases <em>e</em>, the number of edges, from
+        <a class="complete-graph-setting-link" data-setting="2">1</a> to
+        <a class="complete-graph-setting-link" data-setting="3">3</a> (v = 2, e
+        = 1, 2 + 1 = 3). So, v increased by 1, but e increased by 2.
       </p>
     </section>
 
     <section class="step" id="v-e-relationship-step">
-      <p>Now, we can talk about how the edge counts relate to the vertex counts in a complete graph.
+      <p>
+        Now, we can talk about how the edge counts relate to the vertex counts
+        in a complete graph.
       </p>
 
       <p>
@@ -123,69 +148,179 @@
         </thead>
         <tbody>
           <tr>
-            <td><svg id="table-graph-1" class="complete-graph-board" width="50" height="50" viewBox="0 0 100 100"><g class="graph-edge-root"></g><g class="graph-vertex-root"></g></svg></td>
+            <td>
+              <svg
+                id="table-graph-1"
+                class="complete-graph-board"
+                width="50"
+                height="50"
+                viewBox="0 0 100 100"
+              >
+                <g class="graph-edge-root"></g>
+                <g class="graph-vertex-root"></g>
+              </svg>
+            </td>
             <td class="band-1">1</td>
             <td class="band-1">0</td>
             <td class="derivation hidden"></td>
           </tr>
           <tr>
-            <td><svg id="table-graph-2" class="complete-graph-board" width="50" height="50" viewBox="0 0 100 100"><g class="graph-edge-root"></g><g class="graph-vertex-root"></g></svg></td>
+            <td>
+              <svg
+                id="table-graph-2"
+                class="complete-graph-board"
+                width="50"
+                height="50"
+                viewBox="0 0 100 100"
+              >
+                <g class="graph-edge-root"></g>
+                <g class="graph-vertex-root"></g>
+              </svg>
+            </td>
             <td class="band-2">2</td>
             <td class="band-2">1</td>
             <td class="band-1 derivation hidden">1 + 0</td>
           </tr>
 
           <tr>
-            <td><svg id="table-graph-3" class="complete-graph-board" width="50" height="50" viewBox="0 0 100 100"><g class="graph-edge-root"></g><g class="graph-vertex-root"></g></svg></td>
+            <td>
+              <svg
+                id="table-graph-3"
+                class="complete-graph-board"
+                width="50"
+                height="50"
+                viewBox="0 0 100 100"
+              >
+                <g class="graph-edge-root"></g>
+                <g class="graph-vertex-root"></g>
+              </svg>
+            </td>
             <td class="band-3">3</td>
             <td class="band-3">3</td>
             <td class="band-2 derivation hidden">2 + 1</td>
           </tr>
 
           <tr>
-            <td><svg id="table-graph-4" class="complete-graph-board" width="50" height="50" viewBox="0 0 100 100"><g class="graph-edge-root"></g><g class="graph-vertex-root"></g></svg></td>
+            <td>
+              <svg
+                id="table-graph-4"
+                class="complete-graph-board"
+                width="50"
+                height="50"
+                viewBox="0 0 100 100"
+              >
+                <g class="graph-edge-root"></g>
+                <g class="graph-vertex-root"></g>
+              </svg>
+            </td>
             <td class="band-4">4</td>
             <td class="band-4">6</td>
             <td class="band-3 derivation hidden">3 + 3</td>
           </tr>
 
           <tr>
-            <td><svg id="table-graph-5" class="complete-graph-board" width="50" height="50" viewBox="0 0 100 100"><g class="graph-edge-root"></g><g class="graph-vertex-root"></g></svg></td>
+            <td>
+              <svg
+                id="table-graph-5"
+                class="complete-graph-board"
+                width="50"
+                height="50"
+                viewBox="0 0 100 100"
+              >
+                <g class="graph-edge-root"></g>
+                <g class="graph-vertex-root"></g>
+              </svg>
+            </td>
             <td class="band-5">5</td>
             <td class="band-5">10</td>
             <td class="band-4 derivation hidden">4 + 6</td>
           </tr>
 
           <tr>
-            <td><svg id="table-graph-6" class="complete-graph-board" width="50" height="50" viewBox="0 0 100 100"><g class="graph-edge-root"></g><g class="graph-vertex-root"></g></svg></td>
+            <td>
+              <svg
+                id="table-graph-6"
+                class="complete-graph-board"
+                width="50"
+                height="50"
+                viewBox="0 0 100 100"
+              >
+                <g class="graph-edge-root"></g>
+                <g class="graph-vertex-root"></g>
+              </svg>
+            </td>
             <td class="band-6">6</td>
             <td class="band-6">15</td>
             <td class="band-5 derivation hidden">5 + 10</td>
           </tr>
 
           <tr>
-            <td><svg id="table-graph-7" class="complete-graph-board" width="50" height="50" viewBox="0 0 100 100"><g class="graph-edge-root"></g><g class="graph-vertex-root"></g></svg></td>
+            <td>
+              <svg
+                id="table-graph-7"
+                class="complete-graph-board"
+                width="50"
+                height="50"
+                viewBox="0 0 100 100"
+              >
+                <g class="graph-edge-root"></g>
+                <g class="graph-vertex-root"></g>
+              </svg>
+            </td>
             <td class="band-7">7</td>
             <td class="band-7">22</td>
             <td class="band-6 derivation hidden">6 + 15</td>
           </tr>
 
           <tr>
-            <td><svg id="table-graph-8" class="complete-graph-board" width="50" height="50" viewBox="0 0 100 100"><g class="graph-edge-root"></g><g class="graph-vertex-root"></g></svg></td>
+            <td>
+              <svg
+                id="table-graph-8"
+                class="complete-graph-board"
+                width="50"
+                height="50"
+                viewBox="0 0 100 100"
+              >
+                <g class="graph-edge-root"></g>
+                <g class="graph-vertex-root"></g>
+              </svg>
+            </td>
             <td class="band-8">8</td>
             <td class="band-8">30</td>
             <td class="band-7 derivation hidden">7 + 22</td>
           </tr>
 
           <tr>
-            <td><svg id="table-graph-9" class="complete-graph-board" width="50" height="50" viewBox="0 0 100 100"><g class="graph-edge-root"></g><g class="graph-vertex-root"></g></svg></td>
+            <td>
+              <svg
+                id="table-graph-9"
+                class="complete-graph-board"
+                width="50"
+                height="50"
+                viewBox="0 0 100 100"
+              >
+                <g class="graph-edge-root"></g>
+                <g class="graph-vertex-root"></g>
+              </svg>
+            </td>
             <td class="band-9">9</td>
             <td class="band-9">38</td>
             <td class="band-8 derivation hidden">8 + 30</td>
           </tr>
 
           <tr>
-            <td><svg id="table-graph-10" class="complete-graph-board" width="50" height="50" viewBox="0 0 100 100"><g class="graph-edge-root"></g><g class="graph-vertex-root"></g></svg></td>
+            <td>
+              <svg
+                id="table-graph-10"
+                class="complete-graph-board"
+                width="50"
+                height="50"
+                viewBox="0 0 100 100"
+              >
+                <g class="graph-edge-root"></g>
+                <g class="graph-vertex-root"></g>
+              </svg>
+            </td>
             <td class="band-10">10</td>
             <td class="band-10">47</td>
             <td class="band-9 derivation hidden">9 + 38</td>

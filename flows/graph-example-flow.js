@@ -20,6 +20,7 @@ function GraphExampleFlow({
   var vertexCountLabel = document.querySelector(
     containerSelector + ' .vertex-count-label'
   );
+  var settingLinks = document.querySelectorAll('.complete-graph-setting-link');
   var autoslideDirection = 1;
   var automoveTimeoutKey;
 
@@ -31,6 +32,9 @@ function GraphExampleFlow({
         'change',
         onVerticesControlChange
       );
+      for (var i = 0; i < settingLinks.length; ++i) {
+        settingLinks[i].addEventListener('click', onSettingLinkClick);
+      }
       controlInitialized = true;
     }
 
@@ -90,6 +94,13 @@ function GraphExampleFlow({
     }
     exampleGraphVerticesControl.value = newVal;
     setTimeout(graphExampleFlow, 0);
+  }
+
+  function onSettingLinkClick(e) {
+    clearTimeout(automoveTimeoutKey);
+    autoslide = false;
+    exampleGraphVerticesControl.value = +e.target.dataset.setting;
+    graphExampleFlow();
   }
 }
 
