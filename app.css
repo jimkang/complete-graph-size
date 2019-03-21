@@ -51,13 +51,14 @@ button {
 .step {
   display: flex;
   flex-direction: column;
-  border: 1px solid #e950a1;
-  border-radius: 0.5em;
+  border: 2px solid #666;
+  /*! border-radius: 0.5em; */
   margin: 0.5em;
   width: 100%;
   min-width: 320px;
   max-width: 40em;
   padding: 1em;
+  box-shadow: 4px 4px 0px 0px #666;
 }
 
 .step svg,input {
