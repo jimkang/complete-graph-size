@@ -34,7 +34,8 @@ var randomGraphFlow = RandomGraphFlow({
 var veTableGraphFlows = range(1, 11).map(i =>
   GraphExampleFlow({
     containerSelector: `#table-graph-${i}`,
-    fixedNumberOfVertices: i
+    fixedNumberOfVertices: i,
+    vertexRadius: 6
   })
 );
 

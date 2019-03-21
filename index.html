@@ -129,11 +129,6 @@
 
     <section class="step" id="v-e-relationship-step">
       <p>
-        Now, we can talk about how the edge counts relate to the vertex counts
-        in a complete graph.
-      </p>
-
-      <p>
         Here is a table with the edge counts for complete graphs with given
         numbers of vertices.
       </p>
@@ -142,13 +137,14 @@
           <tr>
             <td>Graph</td>
             <td>Vertices</td>
-            <td>Edges</td>
             <td class="derivation">Previous v+e</td>
+            <td class="yield-sign"></td>
+            <td>Edges</td>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>
+            <td class="graph-cell">
               <svg
                 id="table-graph-1"
                 class="complete-graph-board"
@@ -161,11 +157,12 @@
               </svg>
             </td>
             <td class="band-1">1</td>
-            <td class="band-1">0</td>
             <td class="derivation"></td>
+            <td class="yield-sign">&rArr;</td>
+            <td class="band-1">0</td>
           </tr>
           <tr>
-            <td>
+            <td class="graph-cell">
               <svg
                 id="table-graph-2"
                 class="complete-graph-board"
@@ -178,12 +175,13 @@
               </svg>
             </td>
             <td class="band-2">2</td>
-            <td class="band-2">1</td>
             <td class="band-1 derivation">1 + 0</td>
+            <td class="band-1 yield-sign">&rArr;</td>
+            <td class="band-2">1</td>
           </tr>
 
           <tr>
-            <td>
+            <td class="graph-cell">
               <svg
                 id="table-graph-3"
                 class="complete-graph-board"
@@ -196,12 +194,13 @@
               </svg>
             </td>
             <td class="band-3">3</td>
-            <td class="band-3">3</td>
             <td class="band-2 derivation">2 + 1</td>
+            <td class="band-2 yield-sign">&rArr;</td>
+            <td class="band-3">3</td>
           </tr>
 
           <tr>
-            <td>
+            <td class="graph-cell">
               <svg
                 id="table-graph-4"
                 class="complete-graph-board"
@@ -214,12 +213,13 @@
               </svg>
             </td>
             <td class="band-4">4</td>
-            <td class="band-4">6</td>
             <td class="band-3 derivation">3 + 3</td>
+            <td class="band-3 yield-sign">&rArr;</td>
+            <td class="band-4">6</td>
           </tr>
 
           <tr>
-            <td>
+            <td class="graph-cell">
               <svg
                 id="table-graph-5"
                 class="complete-graph-board"
@@ -232,12 +232,13 @@
               </svg>
             </td>
             <td class="band-5">5</td>
-            <td class="band-5">10</td>
             <td class="band-4 derivation">4 + 6</td>
+            <td class="band-4 yield-sign">&rArr;</td>
+            <td class="band-5">10</td>
           </tr>
 
           <tr>
-            <td>
+            <td class="graph-cell">
               <svg
                 id="table-graph-6"
                 class="complete-graph-board"
@@ -250,12 +251,13 @@
               </svg>
             </td>
             <td class="band-6">6</td>
-            <td class="band-6">15</td>
             <td class="band-5 derivation">5 + 10</td>
+            <td class="band-5 yield-sign">&rArr;</td>
+            <td class="band-6">15</td>
           </tr>
 
           <tr>
-            <td>
+            <td class="graph-cell">
               <svg
                 id="table-graph-7"
                 class="complete-graph-board"
@@ -268,12 +270,13 @@
               </svg>
             </td>
             <td class="band-7">7</td>
-            <td class="band-7">22</td>
             <td class="band-6 derivation">6 + 15</td>
+            <td class="band-6 yield-sign">&rArr;</td>
+            <td class="band-7">22</td>
           </tr>
 
           <tr>
-            <td>
+            <td class="graph-cell">
               <svg
                 id="table-graph-8"
                 class="complete-graph-board"
@@ -286,12 +289,13 @@
               </svg>
             </td>
             <td class="band-8">8</td>
-            <td class="band-8">30</td>
             <td class="band-7 derivation">7 + 22</td>
+            <td class="band-7 yield-sign">&rArr;</td>
+            <td class="band-8">30</td>
           </tr>
 
           <tr>
-            <td>
+            <td class="graph-cell">
               <svg
                 id="table-graph-9"
                 class="complete-graph-board"
@@ -304,12 +308,13 @@
               </svg>
             </td>
             <td class="band-9">9</td>
-            <td class="band-9">38</td>
             <td class="band-8 derivation">8 + 30</td>
+            <td class="band-8 yield-sign">&rArr;</td>
+            <td class="band-9">38</td>
           </tr>
 
           <tr>
-            <td>
+            <td class="graph-cell">
               <svg
                 id="table-graph-10"
                 class="complete-graph-board"
@@ -322,8 +327,9 @@
               </svg>
             </td>
             <td class="band-10">10</td>
-            <td class="band-10">47</td>
             <td class="band-9 derivation">9 + 38</td>
+            <td class="band-9 yield-sign">&rArr;</td>
+            <td class="band-10">47</td>
           </tr>
         </tbody>
       </table>

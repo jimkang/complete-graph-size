@@ -186,10 +186,11 @@ svg text {
 }
 
 .step table {
-  border: solid 2px #666;
+  border-top: 0;
   width: 100%;
-  border-collapse: collapse;
+  /*! border-collapse: collapse; */
   margin-bottom: 1em;
+  border-bottom: 0;
 }
 
 .step table thead {
@@ -197,10 +198,13 @@ svg text {
 }
 
 .step table td {
-  border: solid 1px #666;
+  border-bottom: solid 4px white;
   text-align: center;
   padding: 0.25em;
   width: 25%;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
 /* d3.schemeCategory10 */
@@ -262,6 +266,19 @@ svg text {
   text-decoration: underline;
   font-weight: bold;
   cursor: pointer;
+}
+
+.step table tr {
+  display: flex;
+  /*! justify-content: center; */
+}
+
+.step table td.yield-sign {
+  width: 1em;
+}
+
+.step table td.graph-cell {
+  border-bottom: solid 4px #555;
 }
 
 @media all and (max-height: 568px) {
