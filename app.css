@@ -253,7 +253,7 @@ svg text {
 }
 
 .random-graph-board {
-  border: 2px dashed #aaa;
+  /*! border: 2px dashed #aaa; */
   margin: 4px;
 }
 
