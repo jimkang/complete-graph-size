@@ -2,16 +2,12 @@ var handleError = require('handle-error-web');
 var GraphExampleFlow = require('./flows/graph-example-flow');
 //var triangularNumberFlow = require('./flows/triangular-number-flow');
 var introFlow = require('./flows/intro-flow');
-var VERelationshipFlow = require('./flows/v-e-relationship-flow');
 var RandomGraphFlow = require('./flows/random-graph-flow');
 var range = require('d3-array').range;
 
 var graphExampleFlow = GraphExampleFlow({
   containerSelector: '#complete-graph-step',
   autoslide: true
-});
-var veRelationshipFlow = VERelationshipFlow({
-  containerSelector: '#v-e-relationship-step'
 });
 var staticGraphExample1Flow = GraphExampleFlow({
   containerSelector: '#static-graph-1',
@@ -51,7 +47,6 @@ var veTableGraphFlows = range(1, 11).map(i =>
   staticGraphExample2Flow();
   staticGraphExample3Flow();
   //triangularNumberFlow();
-  veRelationshipFlow();
   randomGraphFlow();
   veTableGraphFlows.forEach(f => f());
 })();

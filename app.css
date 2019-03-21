@@ -189,6 +189,7 @@ svg text {
   border: solid 2px #666;
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: 1em;
 }
 
 .step table thead {
@@ -197,9 +198,9 @@ svg text {
 
 .step table td {
   border: solid 1px #666;
-  text-align: end;
+  text-align: center;
   padding: 0.25em;
-  width: 33%;
+  width: 25%;
 }
 
 /* d3.schemeCategory10 */

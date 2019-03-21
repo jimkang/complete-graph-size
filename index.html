@@ -143,7 +143,7 @@
             <td>Graph</td>
             <td>Vertices</td>
             <td>Edges</td>
-            <td class="derivation hidden">Derivation</td>
+            <td class="derivation">Previous v+e</td>
           </tr>
         </thead>
         <tbody>
@@ -162,7 +162,7 @@
             </td>
             <td class="band-1">1</td>
             <td class="band-1">0</td>
-            <td class="derivation hidden"></td>
+            <td class="derivation"></td>
           </tr>
           <tr>
             <td>
@@ -179,7 +179,7 @@
             </td>
             <td class="band-2">2</td>
             <td class="band-2">1</td>
-            <td class="band-1 derivation hidden">1 + 0</td>
+            <td class="band-1 derivation">1 + 0</td>
           </tr>
 
           <tr>
@@ -197,7 +197,7 @@
             </td>
             <td class="band-3">3</td>
             <td class="band-3">3</td>
-            <td class="band-2 derivation hidden">2 + 1</td>
+            <td class="band-2 derivation">2 + 1</td>
           </tr>
 
           <tr>
@@ -215,7 +215,7 @@
             </td>
             <td class="band-4">4</td>
             <td class="band-4">6</td>
-            <td class="band-3 derivation hidden">3 + 3</td>
+            <td class="band-3 derivation">3 + 3</td>
           </tr>
 
           <tr>
@@ -233,7 +233,7 @@
             </td>
             <td class="band-5">5</td>
             <td class="band-5">10</td>
-            <td class="band-4 derivation hidden">4 + 6</td>
+            <td class="band-4 derivation">4 + 6</td>
           </tr>
 
           <tr>
@@ -251,7 +251,7 @@
             </td>
             <td class="band-6">6</td>
             <td class="band-6">15</td>
-            <td class="band-5 derivation hidden">5 + 10</td>
+            <td class="band-5 derivation">5 + 10</td>
           </tr>
 
           <tr>
@@ -269,7 +269,7 @@
             </td>
             <td class="band-7">7</td>
             <td class="band-7">22</td>
-            <td class="band-6 derivation hidden">6 + 15</td>
+            <td class="band-6 derivation">6 + 15</td>
           </tr>
 
           <tr>
@@ -287,7 +287,7 @@
             </td>
             <td class="band-8">8</td>
             <td class="band-8">30</td>
-            <td class="band-7 derivation hidden">7 + 22</td>
+            <td class="band-7 derivation">7 + 22</td>
           </tr>
 
           <tr>
@@ -305,7 +305,7 @@
             </td>
             <td class="band-9">9</td>
             <td class="band-9">38</td>
-            <td class="band-8 derivation hidden">8 + 30</td>
+            <td class="band-8 derivation">8 + 30</td>
           </tr>
 
           <tr>
@@ -323,14 +323,11 @@
             </td>
             <td class="band-10">10</td>
             <td class="band-10">47</td>
-            <td class="band-9 derivation hidden">9 + 38</td>
+            <td class="band-9 derivation">9 + 38</td>
           </tr>
         </tbody>
       </table>
 
-      <button class="show-derivations-button">
-        Show derivations of edge counts
-      </button>
       <p>
         When you add a vertex, the number of edges also increases. But (except
         when going from 0 vertices to 1 or from one vertex to two)
