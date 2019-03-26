@@ -207,37 +207,35 @@ svg text {
   align-items: center;
 }
 
-/* d3.schemeCategory10 */
-
 .band-1 {
-  background-color: #0e78b3; 
+  background-color: #3a948a;
 }
 .band-2 {
-  background-color: #ff7912;
+  background-color: #b2d92c;
 }
 .band-3 {
-  background-color: #1ba231;
+  background-color: #3a948a;
 }
 .band-4 {
-  background-color: #da0627;
+  background-color: #b2d92c;
 }
 .band-5 {
-  background-color: #9565bc;
+  background-color: #3a948a;
 }
 .band-6 {
-  background-color: #8e544b;
+  background-color: #b2d92c;
 }
 .band-7 {
-  background-color: #e671c1;
+  background-color: #3a948a;
 }
 .band-8 {
-  background-color: #7f7f7f;
+  background-color: #b2d92c;
 }
 .band-9 {
-  background-color: #bcbd2a;
+  background-color: #3a948a;
 }
 .band-10 {
-  background-color: #00c0cf;
+  background-color: #b2d92c;
 }
 
 #v-e-relationship-step tbody td {
