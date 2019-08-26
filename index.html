@@ -9,12 +9,36 @@
     <pre id="status-message" class="hidden"></pre>
 
     <section class="step" id="intro-step">
-      Placeholder: Don't forget to add a reason someone would want to know about
-      complete graph edge counts.
+      <p>
+        This is a complete graph. Though there's an overwhelming number of
+        edges, we know how many edges there are by just counting the vertices,
+        of which there are far fewer. There's 32 vertices, so we know that
+        there's <strong>496</strong> edges. How do we know that? Let's see.
+      </p>
+      <svg
+        class="complete-graph-board"
+        width="500"
+        height="500"
+        viewBox="0 0 100 100"
+      >
+        <g class="graph-edge-root"></g>
+        <g class="graph-vertex-root"></g>
+      </svg>
+
+      <input
+        class="graph-vertices-control hidden"
+        type="range"
+        value="3"
+        min="1"
+        max="25"
+        step="0.1"
+      />
     </section>
 
     <section class="step" id="vertex-step">
-      <p>Here is a <span class="important-term">vertex</span>:</p>
+      <p>To explain this, we need to define some terms.</p>
+      <p></p>
+      <p>First, here is a <span class="important-term">vertex</span>:</p>
 
       <svg width="250" height="250" viewBox="0 0 100 100">
         <g class="graph-vertex"><circle cx="50" cy="50" r="4"></circle></g>
@@ -25,7 +49,7 @@
 
     <section class="step" id="edge-step">
       <div id="edge-example-container">
-        <p>Here is an edge:</p>
+        <p>Here is an <span class="important-term">edge</span>:</p>
         <svg
           class="complete-graph-board"
           width="320"
@@ -272,7 +296,7 @@
             <td class="band-7">7</td>
             <td class="band-6 derivation">6 + 15</td>
             <td class="band-6 yield-sign">&rArr;</td>
-            <td class="band-7">22</td>
+            <td class="band-7">21</td>
           </tr>
 
           <tr>
@@ -289,9 +313,9 @@
               </svg>
             </td>
             <td class="band-8">8</td>
-            <td class="band-7 derivation">7 + 22</td>
+            <td class="band-7 derivation">7 + 21</td>
             <td class="band-7 yield-sign">&rArr;</td>
-            <td class="band-8">30</td>
+            <td class="band-8">28</td>
           </tr>
 
           <tr>
@@ -308,9 +332,9 @@
               </svg>
             </td>
             <td class="band-9">9</td>
-            <td class="band-8 derivation">8 + 30</td>
+            <td class="band-8 derivation">8 + 28</td>
             <td class="band-8 yield-sign">&rArr;</td>
-            <td class="band-9">38</td>
+            <td class="band-9">36</td>
           </tr>
 
           <tr>
@@ -327,9 +351,9 @@
               </svg>
             </td>
             <td class="band-10">10</td>
-            <td class="band-9 derivation">9 + 38</td>
+            <td class="band-9 derivation">9 + 36</td>
             <td class="band-9 yield-sign">&rArr;</td>
-            <td class="band-10">47</td>
+            <td class="band-10">45</td>
           </tr>
         </tbody>
       </table>

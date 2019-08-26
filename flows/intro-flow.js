@@ -3,8 +3,16 @@ var renderPoints = require('../dom/render-points');
 var getCompleteGraphVertexPositions = require('../get-complete-graph-vertex-positions');
 var getCompleteGraph = require('../get-complete-graph');
 var getPyramid = require('../get-pyramid');
+var GraphExampleFlow = require('./graph-example-flow');
+
+var introGraphExampleFlow = GraphExampleFlow({
+  containerSelector: '#intro-step',
+  fixedNumberOfVertices: 32
+});
 
 function introFlow() {
+  introGraphExampleFlow();
+
   makeGraphInPanel({
     rootSelector: '#small-intro-graph-board',
     numberOfVertices: 21

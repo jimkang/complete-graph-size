@@ -41,7 +41,9 @@ function GraphExampleFlow({
     var numberOfVertices;
     if (isNaN(fixedNumberOfVertices)) {
       numberOfVertices = Math.round(+exampleGraphVerticesControl.value);
-      vertexCountLabel.textContent = numberOfVertices;
+      if (vertexCountLabel) {
+        vertexCountLabel.textContent = numberOfVertices;
+      }
     } else {
       numberOfVertices = fixedNumberOfVertices;
     }
